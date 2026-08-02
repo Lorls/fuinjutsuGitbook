@@ -15,7 +15,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 4ème cercle | 生命 — vitalité | Validation MJ via suivi |
+| 4ème cercle | 生 命 蓄 気 | Validation MJ via suivi |
 
 ## Définition
 
@@ -25,7 +25,12 @@ Le sceau agit comme une **batterie de secours biologique**, alimentée progressi
 
 ## Kanjis
 
-- **生命** — vitalité
+Le cœur forme le mot **生命** (seimei, « vie »), dont l'énergie est accumulée :
+
+- **生** — vie
+- **命** — vie / destin
+- **蓄** — accumuler
+- **気** — chakra / énergie
 
 ## Règles
 

@@ -14,7 +14,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 1er cercle | 封 (Fū) — sceller / verrouiller | > 50 (en dessous du 3ème cercle) |
+| 1er cercle | 気 + 封 (Fū) | > 50 (en dessous du 3ème cercle) |
 
 ## Définition
 
@@ -22,6 +22,9 @@ Sceau permettant d'**aspirer et sceller définitivement** une certaine quantité
 
 ## Kanjis
 
+Deux kanjis — l'énergie scellée et l'acte de sceller :
+
+- **気** — chakra / énergie
 - **封** (Fū) — sceller / verrouiller
 
 ## Règles

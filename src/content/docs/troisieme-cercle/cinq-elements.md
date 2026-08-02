@@ -19,7 +19,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 3ème cercle | 阻 (bloquer) + les kanjis des 5 éléments (6 kanjis) | > 50 (sauf si 4ème cercle et +) |
+| 3ème cercle | 阻 火 水 風 土 雷 (6 kanjis) | > 50 (sauf si 4ème cercle et +) |
 
 ## Définition
 
@@ -27,8 +27,14 @@ Sceau qui **perturbe la circulation du chakra** de la cible. Il permet de **bloq
 
 ## Kanjis
 
+Six kanjis — bloquer les cinq natures de chakra :
+
 - **阻** — bloquer
-- **+ les kanjis des 5 éléments**
+- **火** — feu
+- **水** — eau
+- **風** — vent
+- **土** — terre
+- **雷** — foudre
 
 :::note
 Avec ses **6 kanjis**, ce sceau est un peu différent des autres.

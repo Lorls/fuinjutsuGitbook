@@ -22,13 +22,13 @@ Le [Désenclavement de sceau](/troisieme-cercle/desenclavement/) est le premier 
 
 ## Kanjis obligatoires (4 à 6 kanjis)
 
-| Sceau | Kanji(s) | Signification |
+| Sceau | Kanjis | Signification |
 |---|---|---|
-| Drain de chakra | 吸 | aspirer / absorber |
-| 5 éléments | 阻 + kanjis des 5 éléments | bloquer (6 kanjis au total) |
-| Silence | 黙 | se taire / silence imposé |
-| Restriction | 縛 (Baku / Shibaru) | lier, attacher, entraver |
-| Désenclavement de sceau | *(pas de kanjis)* | — |
+| Drain de chakra | 吸 気 奪 流 | aspirer + chakra + ravir + flux |
+| Silence | 黙 封 口 秘 | sceller la bouche sur le secret |
+| Restriction | 束 縛 筋 止 | 束縛 (entrave) + muscle + arrêter |
+| 5 éléments | 阻 火 水 風 土 雷 | bloquer + les 5 natures (6 kanjis) |
+| Désenclavement de sceau | *(pas de kanjis)* | l'anti-sceau ne porte aucun kanji |
 
 :::note
 **Drain de chakra :** ajouter des **spirales emprisonnées** aux 4 coins du sceau, mais à l'intérieur du cercle.

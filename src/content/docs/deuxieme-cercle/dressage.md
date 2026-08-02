@@ -17,7 +17,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 2ème cercle | 従 (Jū) — obéissance / suivre | > 50 (en dessous du 3ème cercle) |
+| 2ème cercle | 従 (Jū) + 獣 | > 50 (en dessous du 3ème cercle) |
 
 ## Définition
 
@@ -25,7 +25,10 @@ Sceau permettant de **soumettre la volonté d'un animal**. Il facilite le **dres
 
 ## Kanjis
 
+Deux kanjis — soumettre la bête :
+
 - **従** (Jū) — obéissance / suivre
+- **獣** — bête / animal
 
 ## Règles
 

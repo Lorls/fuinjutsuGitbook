@@ -15,7 +15,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 3ème cercle | 吸 (aspirer / absorber) | 2 × Roll > 50 (activation + placement) |
+| 3ème cercle | 吸 気 奪 流 | 2 × Roll > 50 (activation + placement) |
 
 ## Définition
 
@@ -23,7 +23,12 @@ Sceau créé pour **aspirer le chakra d'une cible** afin d'alimenter le parchemi
 
 ## Kanjis
 
+Quatre kanjis — aspirer et ravir le flux de chakra :
+
 - **吸** — aspirer / absorber
+- **気** — chakra / énergie
+- **奪** — ravir / dérober
+- **流** — flux / courant
 
 :::note
 Ajouter des **spirales emprisonnées** aux 4 coins du sceau, mais à l'intérieur du cercle.

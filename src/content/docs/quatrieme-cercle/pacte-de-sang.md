@@ -16,7 +16,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 4ème cercle | 契 — pacte / serment | Validation préalable obligatoire |
+| 4ème cercle | 血 契 約 印 | Validation préalable obligatoire |
 
 ## Définition
 
@@ -24,7 +24,12 @@ Un sceau conclu entre **2 parties** par l'**échange volontaire de leur sang et 
 
 ## Kanjis
 
+Le cœur forme le mot **契約** (keiyaku, « contrat »), scellé par le sang :
+
+- **血** — sang
 - **契** — pacte / serment
+- **約** — promesse / engagement
+- **印** — sceau / marque
 
 ## Règles
 

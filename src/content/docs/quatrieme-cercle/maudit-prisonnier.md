@@ -17,7 +17,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 4ème cercle | *à définir* | > 50 (sauf si 4ème cercle) |
+| 4ème cercle | 呪 印 縛 従 罰 | > 50 (sauf si 4ème cercle) |
 
 ## Définition
 
@@ -25,7 +25,13 @@ Sceau placé sur un individu afin de **contrôler ses actions**, **limiter sa li
 
 ## Kanjis
 
-- *à définir avec le MJ Fuin*
+Le cœur forme le mot **呪印** (juin, « sceau maudit »), qui lie, soumet et punit :
+
+- **呪** — malédiction
+- **印** — sceau / marque
+- **縛** — lier / entraver
+- **従** — soumettre / obéir
+- **罰** — punition / châtiment
 
 ## Règles
 

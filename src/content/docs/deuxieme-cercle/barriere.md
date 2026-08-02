@@ -15,7 +15,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 2ème cercle | 防 (protection) ou 界 (limite / séparation) | > 50 (en dessous du 3ème cercle) |
+| 2ème cercle | 結 + 界 (+ 防) | > 50 (en dessous du 3ème cercle) |
 
 ## Définition
 
@@ -23,8 +23,11 @@ Sceau conçu pour créer une **barrière hermétique** dans un périmètre défi
 
 ## Kanjis
 
-- **防** — protection
+Le cœur du sceau forme le mot **結界** (kekkai, « barrière »), terme classique du monde ninja, complété par la protection :
+
+- **結** — lier / nouer
 - **界** — limite / séparation
+- **防** — protection
 
 ## Règles
 

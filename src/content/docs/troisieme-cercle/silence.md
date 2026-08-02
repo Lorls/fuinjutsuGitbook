@@ -15,7 +15,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 3ème cercle | 黙 — se taire / silence imposé | > 50 (sauf sur scène FS) |
+| 3ème cercle | 黙 封 口 秘 | > 50 (sauf sur scène FS) |
 
 ## Définition
 
@@ -23,7 +23,12 @@ Sceau appliqué sur une personne, lui **empêchant de divulguer certaines inform
 
 ## Kanjis
 
+Quatre kanjis — sceller la bouche sur le secret :
+
 - **黙** — se taire / silence imposé
+- **封** — sceller
+- **口** — bouche
+- **秘** — secret
 
 ## Règles
 

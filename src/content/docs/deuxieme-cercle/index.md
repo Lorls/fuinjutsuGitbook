@@ -16,8 +16,8 @@ Le 2ème cercle introduit la **manipulation avancée du chakra** : ériger des b
 
 ## Kanjis obligatoires (2 à 4 kanjis)
 
-| Sceau | Kanji(s) | Signification |
+| Sceau | Kanjis | Signification |
 |---|---|---|
-| Barrière physique | 防 / 界 | protection / limite, séparation |
-| Dressage | 従 (Jū) | obéissance / suivre |
-| Accumulation de chakra | 蓄 (chiku) | accumuler |
+| Barrière | 結 + 界 (+ 防) | 結界 (kekkai) — barrière + protection |
+| Dressage | 従 + 獣 | soumettre la bête |
+| Accumulation de chakra | 蓄 + 気 | accumuler le chakra |

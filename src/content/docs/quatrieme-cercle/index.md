@@ -21,9 +21,9 @@ Ces sceaux ont des conséquences pouvant aller **jusqu'à la mort** de la cible.
 
 ## Kanjis
 
-| Sceau | Kanji(s) | Signification |
+| Sceau | Kanjis | Signification |
 |---|---|---|
-| Scellement d'individu | 囚 | prisonnier / captif |
-| Maudit du prisonnier | *à définir* | — |
-| Pacte de sang | 契 | pacte / serment |
-| Réserve vitale | 生命 | vitalité |
+| Scellement d'individu | 囚 封 印 獄 界 | sceller le prisonnier dans une geôle dimensionnelle |
+| Maudit du prisonnier | 呪 印 縛 従 罰 | 呪印 (sceau maudit) + lier, soumettre, punir |
+| Pacte de sang | 血 契 約 印 | 契約 (contrat) scellé par le sang |
+| Réserve vitale | 生 命 蓄 気 | 生命 (vie) + accumuler l'énergie |

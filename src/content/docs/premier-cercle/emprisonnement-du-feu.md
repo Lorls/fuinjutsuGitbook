@@ -15,7 +15,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 1er cercle | 封 (Fū) — sceller / verrouiller | > 50 (en dessous du 3ème cercle) |
+| 1er cercle | 火 + 封 (Fū) | > 50 (en dessous du 3ème cercle) |
 
 ## Définition
 
@@ -23,6 +23,9 @@ Sceau permettant d'**absorber et d'enfermer des flammes** dans un parchemin spé
 
 ## Kanjis
 
+Deux kanjis — l'élément scellé et l'acte de sceller :
+
+- **火** — feu
 - **封** (Fū) — sceller / verrouiller
 
 ## Règles

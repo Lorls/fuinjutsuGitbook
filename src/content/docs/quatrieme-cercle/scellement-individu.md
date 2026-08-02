@@ -16,7 +16,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 4ème cercle | 囚 — prisonnier / captif | > 50 (sauf si Maître Fuin) |
+| 4ème cercle | 囚 封 印 獄 界 | > 50 (sauf si Maître Fuin) |
 
 ## Définition
 
@@ -24,7 +24,13 @@ Sceau qui permet d'**emprisonner une personne dans un sceau**, une autre dimensi
 
 ## Kanjis
 
+Cinq kanjis — sceller le prisonnier dans une dimension-geôle :
+
 - **囚** — prisonnier / captif
+- **封** — sceller
+- **印** — sceau / marque
+- **獄** — prison / geôle
+- **界** — dimension / monde
 
 ## Règles
 

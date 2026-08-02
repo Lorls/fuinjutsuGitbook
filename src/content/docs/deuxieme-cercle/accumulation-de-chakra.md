@@ -16,7 +16,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 2ème cercle | 蓄 (chiku) — accumuler | — |
+| 2ème cercle | 蓄 (chiku) + 気 | — |
 
 ## Définition
 
@@ -24,7 +24,10 @@ Sceau utilisé pour **stocker du chakra de façon indéfinie** dans un parchemin
 
 ## Kanjis
 
+Deux kanjis — accumuler le chakra :
+
 - **蓄** (chiku) — accumuler
+- **気** — chakra / énergie
 
 ## Règles
 

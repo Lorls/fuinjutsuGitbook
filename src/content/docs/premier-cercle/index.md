@@ -15,11 +15,11 @@ Le 1er cercle regroupe les **sceaux fondamentaux** du Fuinjutsu. Ils posent les 
 - [Emprisonnement du chakra](/premier-cercle/emprisonnement-du-chakra/)
 - [Sceau de verrouillage](/premier-cercle/verrouillage/)
 
-## Kanjis obligatoires (2 kanjis minimum)
+## Kanjis obligatoires (2 kanjis)
 
-| Sceau | Kanji principal | Signification |
+| Sceau | Kanjis | Signification |
 |---|---|---|
-| Sceau de stockage | 蔵 | stockage |
-| Emprisonnement du feu | 封 (Fū) | sceller / verrouiller |
-| Emprisonnement du chakra | 封 (Fū) | sceller / verrouiller |
-| Verrouillage | 錠 | verrou / cadenas |
+| Sceau de stockage | 収 + 蔵 | 収蔵 (shūzō) — mettre en réserve |
+| Emprisonnement du feu | 火 + 封 | feu + sceller |
+| Emprisonnement du chakra | 気 + 封 | chakra + sceller |
+| Verrouillage | 施 + 錠 | 施錠 (sejō) — verrouiller |

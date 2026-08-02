@@ -15,7 +15,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 3ème cercle | 縛 (Baku / Shibaru) — lier, attacher, entraver | > 50 |
+| 3ème cercle | 束 縛 筋 止 | > 50 |
 
 ## Définition
 
@@ -23,7 +23,12 @@ Sceau utilisé pour **immobiliser temporairement les muscles** d'une personne.
 
 ## Kanjis
 
-- **縛** (Baku / Shibaru) — lier, attacher, entraver
+Le cœur forme le mot **束縛** (sokubaku, « entrave »), appliqué aux muscles :
+
+- **束** — attacher / entraver
+- **縛** (Baku / Shibaru) — lier
+- **筋** — muscle
+- **止** — arrêter / immobiliser
 
 ## Règles
 

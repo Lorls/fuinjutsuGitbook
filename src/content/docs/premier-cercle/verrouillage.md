@@ -16,7 +16,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 1er cercle | 錠 — verrou / cadenas | > 50 (en dessous du 3ème cercle) |
+| 1er cercle | 施 + 錠 (施錠) | > 50 (en dessous du 3ème cercle) |
 
 ## Définition
 
@@ -24,6 +24,9 @@ Sceau qui crée une **barrière de sécurité** sur une cible afin d'en empêche
 
 ## Kanjis
 
+Deux kanjis formant le mot **施錠** (sejō, « verrouiller ») :
+
+- **施** — appliquer / poser
 - **錠** — verrou / cadenas
 
 ## Règles

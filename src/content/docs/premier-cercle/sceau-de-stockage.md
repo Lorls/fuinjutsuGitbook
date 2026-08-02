@@ -15,7 +15,7 @@ sidebar:
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 1er cercle | 蔵 (stockage) | > 50 (en dessous du 3ème cercle) |
+| 1er cercle | 収 + 蔵 (収蔵) | > 50 (en dessous du 3ème cercle) |
 
 ## Définition
 
@@ -23,7 +23,10 @@ Sceau permettant de **stocker des objets matériels** dans un espace dimensionne
 
 ## Kanjis
 
-- **蔵** — stockage
+Deux kanjis formant le mot **収蔵** (shūzō, « mettre en réserve ») :
+
+- **収** — ranger / collecter
+- **蔵** — stockage / entrepôt
 
 ## Règles
 
