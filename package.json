@@ -1,0 +1,13 @@
+{
+  "name": "fuinjutsu-gitbook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Grimoire de Fuinjutsu du serveur Zenkai",
+  "scripts": {
+    "build": "honkit build . _book",
+    "serve": "honkit serve"
+  },
+  "devDependencies": {
+    "honkit": "^6.0.2"
+  }
+}
