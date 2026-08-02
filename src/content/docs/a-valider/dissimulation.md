@@ -2,7 +2,7 @@
 title: Sceau de dissimulation
 description: Sceau qui rend un petit objet discret et masque sa signature de chakra. Proposition à valider.
 sidebar:
-  order: 6
+  order: 2
   badge:
     text: À valider
     variant: caution

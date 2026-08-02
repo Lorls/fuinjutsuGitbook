@@ -2,7 +2,7 @@
 title: Sceau réparateur
 description: Sceau qui recolle et stabilise temporairement un objet cassé. Proposition à valider.
 sidebar:
-  order: 9
+  order: 3
   badge:
     text: À valider
     variant: caution
