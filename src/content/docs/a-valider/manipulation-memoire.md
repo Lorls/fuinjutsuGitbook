@@ -47,8 +47,5 @@ Quatre kanjis — **記憶** (kioku, « mémoire ») manipulée et scellée :
 
 ## Règles HRP (obligatoires)
 
-- **Accord HRP explicite du joueur ciblé** — celui du joueur, pas seulement du personnage. **Rien ne se joue à l'insu du joueur.**
 - **Validation préalable du MJ Fuin / staff** avant toute pose, sans exception.
-- Les effets exacts — **souvenir concerné, nature de la modification (scellé / effacé / altéré / implanté), portée et durée** — sont définis et **validés par écrit AVANT la scène**.
-- Le joueur ciblé conserve un **droit de veto HRP à tout moment**.
-- **Preuve de la pose obligatoire** (enregistrement + conditions écrites), conservée dans le suivi.
+- **Preuve obligatoire** (enregistrement + conditions écrites), conservée dans le suivi.
