@@ -20,7 +20,7 @@ Ces sceaux visent à étoffer le grimoire avec de l'utilité et de la variété 
 - [Parchemin explosif](/a-valider/parchemin-explosif/) — offensif *(1er cercle)*
 - [Sceau de dissimulation](/a-valider/dissimulation/) — furtif *(1er cercle)*
 - [Sceau réparateur](/a-valider/reparateur/) — utilitaire *(1er cercle)*
-- [Sceau d'absorption de chakra](/a-valider/absorption-chakra/) — défensif *(3ème cercle)*
+- [Sceau d'absorption de chakra](/a-valider/absorption-chakra/) — défensif *(4ème cercle)*
 - [Sceau de manipulation de mémoire](/a-valider/manipulation-memoire/) — mental *(4ème cercle, sensible)*
 
 ## Kanjis proposés

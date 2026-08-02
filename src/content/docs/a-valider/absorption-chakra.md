@@ -25,7 +25,7 @@ Proposition en attente de validation du staff / MJ Fuin.
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 3ème cercle *(proposé)* | 吸 収 気 盾 | > 50 |
+| 4ème cercle *(proposé)* | 吸 収 気 盾 | > 50 |
 
 ## Définition
 
