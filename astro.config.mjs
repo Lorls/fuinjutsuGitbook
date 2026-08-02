@@ -37,6 +37,11 @@ export default defineConfig({
           label: 'Sceaux de clan',
           autogenerate: { directory: 'sceaux-de-clan' },
         },
+        {
+          label: 'Sceaux à valider',
+          badge: { text: 'À valider', variant: 'caution' },
+          autogenerate: { directory: 'a-valider' },
+        },
       ],
     }),
   ],
