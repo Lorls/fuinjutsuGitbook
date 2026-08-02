@@ -1,0 +1,58 @@
+/* Thème Fuinjutsu — accent violet « sceau » */
+:root {
+  --sl-color-accent-low: #241537;
+  --sl-color-accent: #7c3aed;
+  --sl-color-accent-high: #c9b3f5;
+
+  --sl-color-white: #f5f2fb;
+  --sl-color-gray-1: #e6e0f0;
+  --sl-color-gray-2: #c1b8d1;
+  --sl-color-gray-3: #8b81a0;
+  --sl-color-gray-4: #574f6b;
+  --sl-color-gray-5: #37324a;
+  --sl-color-gray-6: #241f36;
+  --sl-color-black: #16121f;
+}
+
+/* Thème clair */
+:root[data-theme='light'] {
+  --sl-color-accent-low: #e9defb;
+  --sl-color-accent: #6d28d9;
+  --sl-color-accent-high: #2e1065;
+
+  --sl-color-white: #1b1626;
+  --sl-color-gray-1: #2a2438;
+  --sl-color-gray-2: #423b57;
+  --sl-color-gray-3: #6b6382;
+  --sl-color-gray-4: #948bab;
+  --sl-color-gray-5: #d6cfe6;
+  --sl-color-gray-6: #eee9f7;
+  --sl-color-gray-7: #f6f3fc;
+  --sl-color-black: #ffffff;
+}
+
+/* Titre du site un peu plus caractère */
+.site-title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Icône SVG en tête de page de sceau */
+.seal-icon {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1.5rem;
+}
+.seal-icon svg {
+  filter: drop-shadow(0 0 14px color-mix(in srgb, var(--sl-color-accent) 40%, transparent));
+}
+
+/* Tableau récap (Cercle | Kanjis | Roll) plus lisible */
+.content-panel table {
+  font-size: var(--sl-text-sm);
+}
+
+/* Hero de la page d'accueil */
+.hero .tagline {
+  font-style: italic;
+}

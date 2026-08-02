@@ -2,12 +2,16 @@
   "name": "fuinjutsu-gitbook",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Grimoire de Fuinjutsu du serveur Zenkai",
   "scripts": {
-    "build": "honkit build . _book",
-    "serve": "honkit serve"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "devDependencies": {
-    "honkit": "^6.0.2"
+  "dependencies": {
+    "astro": "^5.5.0",
+    "@astrojs/starlight": "^0.37.0",
+    "sharp": "^0.34.0"
   }
 }
