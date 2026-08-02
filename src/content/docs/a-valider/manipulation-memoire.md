@@ -1,8 +1,8 @@
 ---
 title: Sceau de manipulation de mémoire
-description: Sceau sensible qui scelle, dissimule ou verrouille des souvenirs précis d'une cible. Proposition à valider.
+description: Sceau puissant qui scelle, efface, altère ou implante des souvenirs, encadré par des règles HRP strictes. Proposition à valider.
 sidebar:
-  order: 5
+  order: 6
   badge:
     text: À valider
     variant: caution
@@ -18,7 +18,7 @@ sidebar:
 </figure>
 
 :::danger[À valider — sceau sensible]
-Proposition **très sensible** (impact mental sur un personnage). Validation du staff / MJ Fuin **obligatoire** avant toute pose, sans exception.
+Sceau **puissant** dont l'impact touche directement un autre personnage. Sa limite n'est **pas** sa puissance in-RP, mais les **règles HRP** ci-dessous, qui protègent le joueur ciblé. Validation du staff / MJ Fuin **obligatoire**.
 :::
 
 | Cercle | Kanjis | Roll |
@@ -27,7 +27,7 @@ Proposition **très sensible** (impact mental sur un personnage). Validation du 
 
 ## Définition
 
-Sceau qui agit sur les **souvenirs précis** d'une cible : il permet de **sceller** (verrouiller l'accès à un souvenir), de le **dissimuler** ou de le **rendre flou**. Il n'invente pas de faux souvenirs — il agit sur ce qui existe déjà.
+Sceau qui agit sur les **souvenirs** d'une cible. Il permet de **sceller** (verrouiller l'accès à un souvenir), d'**effacer**, d'**altérer** ou d'**implanter** des souvenirs. C'est l'un des sceaux mentaux les plus puissants du répertoire — d'où l'encadrement HRP qui l'accompagne.
 
 ## Kanjis
 
@@ -38,11 +38,17 @@ Quatre kanjis — **記憶** (kioku, « mémoire ») manipulée et scellée :
 - **操** — manipuler / contrôler
 - **印** — sceau / marque
 
-## Règles
+## Règles RP
 
 - **Contact physique direct** avec la cible (tête / tempe).
-- Cible **consentante** ou **en pain** — jamais à l'insu d'un joueur.
-- **Validation du MJ Fuin obligatoire** avant la pose, avec conditions **écrites** (quel souvenir, portée, durée).
-- Ne peut que **sceller / masquer** un souvenir, **jamais en implanter un faux**.
-- **Réversible** : le sceau peut être retiré par [désenclavement](/troisieme-cercle/desenclavement/) ou par le poseur.
-- **Preuve de la pose obligatoire** (rec + conditions écrites).
+- La cible doit être **capturée, consentante ou en pain** (contexte RP).
+- Le sceau peut **sceller, effacer, altérer ou implanter** un ou plusieurs souvenirs.
+- **Réversible** : le sceau peut être retiré par [désenclavement](/troisieme-cercle/desenclavement/) ou par le poseur — mais un souvenir effacé ou implanté ne revient pas de lui-même.
+
+## Règles HRP (obligatoires)
+
+- **Accord HRP explicite du joueur ciblé** — celui du joueur, pas seulement du personnage. **Rien ne se joue à l'insu du joueur.**
+- **Validation préalable du MJ Fuin / staff** avant toute pose, sans exception.
+- Les effets exacts — **souvenir concerné, nature de la modification (scellé / effacé / altéré / implanté), portée et durée** — sont définis et **validés par écrit AVANT la scène**.
+- Le joueur ciblé conserve un **droit de veto HRP à tout moment**.
+- **Preuve de la pose obligatoire** (enregistrement + conditions écrites), conservée dans le suivi.

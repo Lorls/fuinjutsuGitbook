@@ -2,7 +2,7 @@
 title: Sceau des 4 brouillards noirs
 description: Formation de 4 sceaux qui génère un brouillard noir aveuglant et désorientant. Proposition à valider.
 sidebar:
-  order: 4
+  order: 5
   badge:
     text: À valider
     variant: caution
