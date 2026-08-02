@@ -14,6 +14,14 @@ Certains sceaux relèvent du **Juinjutsu** (sceaux maudits) et sont **exclusifs 
 - [Sceau des Roran](/sceaux-de-clan/roran/)
 - [Sceau des Hakumei](/sceaux-de-clan/hakumei/)
 
+## Kanjis
+
+| Sceau | Kanjis | Signification |
+|---|---|---|
+| Oiseau en cage | 呪 印 鳥 籠 | 呪印 (sceau maudit) + 鳥籠 (cage à oiseau) |
+| Roran | 双 魂 縛 契 | lier les âmes jumelles par un pacte |
+| Hakumei | *à définir* | à voir avec le MJ Hakumei |
+
 :::caution
 Plusieurs de ces sceaux nécessitent l'accord d'un **chef de clan** et/ou une **validation du MJ** concerné.
 :::

@@ -22,6 +22,15 @@ sidebar:
 
 Sceau de **Juinjutsu** liant **2 jumeaux** après la réussite d'une **épreuve (rituel)**. Ceux-ci sont alors **liés à vie** : ce sceau lie leurs **sentiments et leurs âmes** jusqu'à leur mort.
 
+## Kanjis
+
+Quatre kanjis — lier les âmes des jumeaux par un pacte :
+
+- **双** — paire / jumeaux
+- **魂** — âme
+- **縛** — lier
+- **契** — pacte
+
 ## Règles
 
 - Seul le **chef de clan** peut le poser **si le sceau lui a été enseigné** ; sinon, il devra le **découvrir d'une autre manière**.

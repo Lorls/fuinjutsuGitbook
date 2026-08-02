@@ -22,6 +22,15 @@ sidebar:
 
 Sceau maudit (**Juinjutsu**) **exclusif au clan Hyuga**. Il remplit deux fonctions.
 
+## Kanjis
+
+Quatre kanjis — **呪印** (juin, « sceau maudit ») enfermant **鳥籠** (torikago, « cage à oiseau ») :
+
+- **呪** — malédiction
+- **印** — sceau / marque
+- **鳥** — oiseau
+- **籠** — cage
+
 ## Contrôle et soumission
 
 - Le **chef de clan de la branche principale** peut infliger une **douleur extrême** aux membres de la **branche secondaire** en activant le sceau.
