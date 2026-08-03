@@ -3,6 +3,9 @@ title: Sceau de silence
 description: Sceau du 3ème cercle empêchant une personne de divulguer certaines informations sous risque de mort.
 sidebar:
   order: 3
+  badge:
+    text: Slotté
+    variant: tip
 ---
 
 <figure class="seal-icon">
@@ -16,6 +19,10 @@ sidebar:
 | Cercle | Kanjis | Roll |
 |---|---|---|
 | 3ème cercle | 黙 封 口 秘 | > 50 (sauf sur scène FS) |
+
+:::note[Sceau slotté]
+**1 à 2 slots par village** + **1 pour le chef FS**. Voir le [système de slots](/systeme-de-slots/).
+:::
 
 ## Définition
 

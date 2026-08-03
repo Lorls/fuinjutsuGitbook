@@ -3,6 +3,9 @@ title: Pacte de sang
 description: Sceau du 3ème cercle conclu entre deux parties par l'échange volontaire de leur sang et de leur chakra.
 sidebar:
   order: 6
+  badge:
+    text: Slotté
+    variant: tip
 ---
 
 <figure class="seal-icon">
@@ -17,6 +20,10 @@ sidebar:
 | Cercle | Kanjis | Roll |
 |---|---|---|
 | 3ème cercle | 血 契 約 印 | Validation préalable obligatoire |
+
+:::note[Sceau slotté]
+**2 slots par village.** Voir le [système de slots](/systeme-de-slots/).
+:::
 
 ## Définition
 

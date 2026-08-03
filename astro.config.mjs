@@ -17,6 +17,7 @@ export default defineConfig({
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
       sidebar: [
         { label: 'Règles générales', link: '/regles-generales/' },
+        { label: 'Système de slots', link: '/systeme-de-slots/' },
         {
           label: '1er cercle',
           autogenerate: { directory: 'premier-cercle' },

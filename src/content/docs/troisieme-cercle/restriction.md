@@ -3,6 +3,9 @@ title: Sceau de restriction
 description: Sceau du 3ème cercle utilisé pour immobiliser temporairement les muscles d'une personne.
 sidebar:
   order: 4
+  badge:
+    text: Slotté
+    variant: tip
 ---
 
 <figure class="seal-icon">
@@ -16,6 +19,10 @@ sidebar:
 | Cercle | Kanjis | Roll |
 |---|---|---|
 | 3ème cercle | 束 縛 筋 止 | > 50 |
+
+:::note[Sceau slotté]
+**2 slots par village.** Voir le [système de slots](/systeme-de-slots/).
+:::
 
 ## Définition
 
