@@ -1,6 +1,6 @@
 ---
-title: 5ème cercle & Maître Fuin
-description: Vue d'ensemble des sceaux interdits et suprêmes du Fuinjutsu, réservés aux Maîtres Fuin.
+title: 5ème cercle & Grand Maître Fuin
+description: Vue d'ensemble des sceaux interdits et suprêmes du Fuinjutsu, réservés aux Grands Maîtres Fuin.
 sidebar:
   order: 0
   label: Vue d'ensemble
@@ -9,7 +9,7 @@ sidebar:
     variant: danger
 ---
 
-Le 5ème cercle rassemble les **sceaux interdits (kinjutsu) et suprêmes** du Fuinjutsu : réanimer les morts, sceller une entité colossale, extraire un démon à queues. Ils relèvent du **Maître Fuin** et de l'**événementiel encadré**.
+Le 5ème cercle correspond au rang de **Grand Maître Fuin**. Il rassemble les **sceaux interdits (kinjutsu) et suprêmes** du Fuinjutsu : réanimer les morts, sceller une entité colossale, extraire un démon à queues. Ils relèvent de l'**événementiel encadré**.
 
 :::danger[Kinjutsu — encadrement maximal]
 Ces sceaux sont **interdits** ou **rituels**. Chacun exige une **validation préalable du staff / MJ Fuin**, se joue généralement en **scène événementielle**, et peut demander un **sacrifice** ou un **groupe de lanceurs**.
@@ -33,8 +33,9 @@ Sceaux nouvellement classés : définitions et kanjis **proposés** (basés sur 
 | Edo Tensei | 穢 土 転 生 | 穢土転生 — réincarnation du monde impur |
 | Neuf dragons illusoires | 幻 龍 九 封 尽 | dragons fantômes + neuf + scellement total |
 
-## Relation avec le titre de Maître Fuin
+## Les rangs de maîtrise
 
-:::caution[À trancher]
-La progression indiquait auparavant **4ème cercle → Maître Fuin**. Avec ce nouveau cercle, à confirmer : le 5ème cercle **est-il** le rang de Maître Fuin, ou un palier **avant** ? Dis-le-moi et je mets à jour les [règles de progression](/regles-generales/).
-:::
+- **4ème cercle** = **Maître Fuin**
+- **5ème cercle** = **Grand Maître Fuin**
+
+Voir les [règles de progression](/regles-generales/) pour les conditions de passage.

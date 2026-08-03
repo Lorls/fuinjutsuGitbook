@@ -31,11 +31,11 @@ export default defineConfig({
           autogenerate: { directory: 'troisieme-cercle' },
         },
         {
-          label: '4ème cercle',
+          label: '4ème cercle · Maître',
           autogenerate: { directory: 'quatrieme-cercle' },
         },
         {
-          label: '5ème cercle & Maître Fuin',
+          label: '5ème cercle · Grand Maître',
           badge: { text: 'Interdit', variant: 'danger' },
           autogenerate: { directory: 'cinquieme-cercle' },
         },

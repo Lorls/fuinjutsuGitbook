@@ -11,8 +11,10 @@ Le Fuinjutsu se pratique en gravissant des **cercles**. Chaque passage exige un 
 |---|---|---|---|
 | **1er → 2ème cercle** | 2 sceaux minimum du 1er cercle | Calligraphie | 1 sceau = 4 narrations |
 | **2ème → 3ème cercle** | 2 sceaux du 2ème cercle | Prendre des disciples sous son aile | 1 sceau = 5 narrations |
-| **3ème → 4ème cercle** | 3 ou 4 sceaux du 3ème cercle | — | 1 sceau = 6 narrations |
-| **4ème → Maître Fuin** | — | Appréciation du MJ | 1 sceau = 7 narrations |
+| **3ème → 4ème cercle · Maître Fuin** | 3 ou 4 sceaux du 3ème cercle | — | 1 sceau = 6 narrations |
+| **4ème → 5ème cercle · Grand Maître Fuin** | — | Appréciation du MJ | 1 sceau = 7 narrations |
+
+> **Rangs de maîtrise :** atteindre le **4ème cercle** confère le titre de **Maître Fuin**, et le **5ème cercle** celui de **Grand Maître Fuin**.
 
 :::note[Coût en narrations]
 Apprendre un sceau demande un nombre de narrations qui augmente avec le cercle (4 → 5 → 6 → 7). Plus on monte, plus chaque sceau exige d'investissement RP.
