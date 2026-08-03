@@ -1,23 +1,23 @@
 ---
 title: Sceau maudit du prisonnier
-description: Sceau du 4ème cercle placé sur un individu pour contrôler ses actions et garantir son obéissance.
+description: Sceau du 3ème cercle placé sur un individu pour contrôler ses actions et garantir son obéissance.
 sidebar:
-  order: 2
+  order: 7
 ---
 
 <figure class="seal-icon">
-<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ef4444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="24" cy="24" r="21" opacity="0.3"/>
   <path d="M24 11 C 16 11, 12 17, 12 23 C 12 27, 14 29, 16 31 V35 H32 V31 C 34 29, 36 27, 36 23 C 36 17, 32 11, 24 11 Z"/>
-  <circle cx="19" cy="23" r="2.1" fill="#ef4444" stroke="none"/>
-  <circle cx="29" cy="23" r="2.1" fill="#ef4444" stroke="none"/>
+  <circle cx="19" cy="23" r="2.1" fill="#8b5cf6" stroke="none"/>
+  <circle cx="29" cy="23" r="2.1" fill="#8b5cf6" stroke="none"/>
   <path d="M22 35 v-3 M26 35 v-3" stroke-width="1.6"/>
 </svg>
 </figure>
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 4ème cercle | 呪 印 縛 従 罰 | > 50 (sauf si 4ème cercle) |
+| 3ème cercle | 呪 印 縛 従 罰 | > 50 (sauf si 4ème cercle) |
 
 ## Définition
 

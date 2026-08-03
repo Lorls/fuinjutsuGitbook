@@ -31,8 +31,13 @@ export default defineConfig({
           autogenerate: { directory: 'troisieme-cercle' },
         },
         {
-          label: '4ème cercle & Maître Fuin',
+          label: '4ème cercle',
           autogenerate: { directory: 'quatrieme-cercle' },
+        },
+        {
+          label: '5ème cercle & Maître Fuin',
+          badge: { text: 'Interdit', variant: 'danger' },
+          autogenerate: { directory: 'cinquieme-cercle' },
         },
         {
           label: 'Sceaux de clan',

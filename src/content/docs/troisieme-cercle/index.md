@@ -20,6 +20,8 @@ Le [Désenclavement de sceau](/troisieme-cercle/desenclavement/) est le premier 
 - [Sceau de restriction](/troisieme-cercle/restriction/)
 - [Sceau des 5 éléments](/troisieme-cercle/cinq-elements/)
 - [Pacte de sang](/troisieme-cercle/pacte-de-sang/)
+- [Sceau maudit du prisonnier](/troisieme-cercle/maudit-prisonnier/)
+- [Sceau de réserve vitale](/troisieme-cercle/reserve-vitale/)
 
 ## Kanjis obligatoires (4 à 6 kanjis)
 
@@ -31,6 +33,8 @@ Le [Désenclavement de sceau](/troisieme-cercle/desenclavement/) est le premier 
 | 5 éléments | 阻 火 水 風 土 雷 | bloquer + les 5 natures (6 kanjis) |
 | Désenclavement de sceau | *(pas de kanjis)* | l'anti-sceau ne porte aucun kanji |
 | Pacte de sang | 血 契 約 印 | 契約 (contrat) scellé par le sang |
+| Maudit du prisonnier | 呪 印 縛 従 罰 | 呪印 (sceau maudit) + lier, soumettre, punir |
+| Réserve vitale | 生 命 蓄 気 | 生命 (vie) + accumuler l'énergie |
 
 :::note
 **Drain de chakra :** ajouter des **spirales emprisonnées** aux 4 coins du sceau, mais à l'intérieur du cercle.
