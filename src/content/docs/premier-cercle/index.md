@@ -14,6 +14,8 @@ Le 1er cercle regroupe les **sceaux fondamentaux** du Fuinjutsu. Ils posent les 
 - [Emprisonnement du feu](/premier-cercle/emprisonnement-du-feu/)
 - [Emprisonnement du chakra](/premier-cercle/emprisonnement-du-chakra/)
 - [Sceau de verrouillage](/premier-cercle/verrouillage/)
+- [Parchemin explosif](/premier-cercle/parchemin-explosif/)
+- [Sceau de dissimulation](/premier-cercle/dissimulation/)
 
 ## Kanjis obligatoires (2 kanjis)
 
@@ -23,3 +25,5 @@ Le 1er cercle regroupe les **sceaux fondamentaux** du Fuinjutsu. Ils posent les 
 | Emprisonnement du feu | 火 + 封 | feu + sceller |
 | Emprisonnement du chakra | 気 + 封 | chakra + sceller |
 | Verrouillage | 施 + 錠 | 施錠 (sejō) — verrouiller |
+| Parchemin explosif | 起 + 爆 | 起爆 (kibaku) — détonation |
+| Sceau de dissimulation | 隠 + 蔽 | 隠蔽 (inpei) — dissimulation |

@@ -10,25 +10,17 @@ sidebar:
 ---
 
 :::caution[Section provisoire]
-Tous les sceaux de cette section sont des **propositions**. Ils ne sont **pas encore validés** par le staff / MJ Fuin et peuvent être modifiés, déplacés dans un cercle ou refusés.
+Les sceaux de cette section sont des **propositions**. Ils ne sont **pas encore validés** par le staff / MJ Fuin et peuvent être modifiés, déplacés dans un cercle ou refusés.
 :::
 
-Ces sceaux visent à étoffer le grimoire avec de l'utilité et de la variété RP. La plupart sont **simples** (un seul effet clair), certains plus **sensibles** et donc davantage encadrés.
+Une fois un sceau validé, il quitte cette section pour rejoindre son cercle définitif.
 
 ## Sceaux proposés
 
-- [Parchemin explosif](/a-valider/parchemin-explosif/) — offensif *(1er cercle)*
-- [Sceau de dissimulation](/a-valider/dissimulation/) — furtif *(1er cercle)*
 - [Sceau réparateur](/a-valider/reparateur/) — utilitaire *(1er cercle)*
-- [Sceau d'absorption de chakra](/a-valider/absorption-chakra/) — défensif *(4ème cercle)*
-- [Sceau de manipulation de mémoire](/a-valider/manipulation-memoire/) — mental *(4ème cercle, sensible)*
 
 ## Kanjis proposés
 
 | Sceau | Kanjis | Signification |
 |---|---|---|
-| Parchemin explosif | 起 爆 | 起爆 (kibaku) — détonation |
-| Sceau de dissimulation | 隠 蔽 | 隠蔽 (inpei) — dissimulation |
 | Sceau réparateur | 接 合 | 接合 (setsugō) — jonction / assemblage |
-| Sceau d'absorption de chakra | 吸 収 気 盾 | 吸収 (kyūshū, absorption) + chakra + bouclier |
-| Manipulation de mémoire | 記 憶 操 印 | 記憶 (kioku, mémoire) + manipuler + sceau |

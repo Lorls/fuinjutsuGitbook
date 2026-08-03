@@ -1,28 +1,21 @@
 ---
 title: Parchemin explosif
-description: Talisman qui stocke du chakra explosif, détoné à distance ou au contact. Proposition à valider.
+description: Talisman du 1er cercle qui stocke du chakra explosif, détoné à distance ou au contact.
 sidebar:
-  order: 1
-  badge:
-    text: À valider
-    variant: caution
+  order: 5
 ---
 
 <figure class="seal-icon">
-<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="24" cy="24" r="21" opacity="0.3"/>
   <path d="M24 11 l2.5 6 l6 -2.5 l-2.5 6 l6 2.5 l-6 2.5 l2.5 6 l-6 -2.5 l-2.5 6 l-2.5 -6 l-6 2.5 l2.5 -6 l-6 -2.5 l6 -2.5 l-2.5 -6 l6 2.5 z"/>
-  <circle cx="24" cy="24" r="3" fill="#ea580c" stroke="none"/>
+  <circle cx="24" cy="24" r="3" fill="#3b82f6" stroke="none"/>
 </svg>
 </figure>
 
-:::caution[À valider]
-Proposition inspirée du canon Naruto (*kibaku fuda*), en attente de validation du staff / MJ Fuin.
-:::
-
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 1er cercle *(proposé)* | 起 爆 (起爆) | > 50 |
+| 1er cercle | 起 爆 (起爆) | > 50 |
 
 ## Définition
 

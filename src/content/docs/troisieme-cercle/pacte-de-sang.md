@@ -1,22 +1,22 @@
 ---
 title: Pacte de sang
-description: Sceau du 4ème cercle conclu entre deux parties par l'échange volontaire de leur sang et de leur chakra.
+description: Sceau du 3ème cercle conclu entre deux parties par l'échange volontaire de leur sang et de leur chakra.
 sidebar:
-  order: 3
+  order: 6
 ---
 
 <figure class="seal-icon">
-<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ef4444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="24" cy="24" r="21" opacity="0.3"/>
   <circle cx="19" cy="29" r="6"/>
   <circle cx="29" cy="29" r="6"/>
-  <path d="M24 10 c2.5 4.5 4 6.5 4 9 a4 4 0 0 1 -8 0 c0 -2.5 1.5 -4.5 4 -9 Z" fill="#ef4444" stroke="none"/>
+  <path d="M24 10 c2.5 4.5 4 6.5 4 9 a4 4 0 0 1 -8 0 c0 -2.5 1.5 -4.5 4 -9 Z" fill="#8b5cf6" stroke="none"/>
 </svg>
 </figure>
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 4ème cercle | 血 契 約 印 | Validation préalable obligatoire |
+| 3ème cercle | 血 契 約 印 | Validation préalable obligatoire |
 
 ## Définition
 

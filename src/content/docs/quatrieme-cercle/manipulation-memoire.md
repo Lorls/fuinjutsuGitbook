@@ -1,15 +1,12 @@
 ---
 title: Sceau de manipulation de mémoire
-description: Sceau puissant qui scelle, efface, altère ou implante des souvenirs, encadré par des règles HRP strictes. Proposition à valider.
+description: Sceau du 4ème cercle qui scelle, efface, altère ou implante des souvenirs, encadré par des règles HRP strictes.
 sidebar:
   order: 6
-  badge:
-    text: À valider
-    variant: caution
 ---
 
 <figure class="seal-icon">
-<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ef4444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="24" cy="24" r="21" opacity="0.3"/>
   <circle cx="24" cy="21" r="9"/>
   <path d="M24 17 a4 4 0 1 1 -3 7 a2 2 0 1 1 2.5 -3.5"/>
@@ -17,13 +14,13 @@ sidebar:
 </svg>
 </figure>
 
-:::danger[À valider — sceau sensible]
+:::danger[Sceau sensible]
 Sceau **puissant** dont l'impact touche directement un autre personnage. Sa limite n'est **pas** sa puissance in-RP, mais les **règles HRP** ci-dessous, qui protègent le joueur ciblé. Validation du staff / MJ Fuin **obligatoire**.
 :::
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 4ème cercle *(proposé)* | 記 憶 操 印 | > 50 (+ validation MJ) |
+| 4ème cercle | 記 憶 操 印 | > 50 (+ validation MJ) |
 
 ## Définition
 
