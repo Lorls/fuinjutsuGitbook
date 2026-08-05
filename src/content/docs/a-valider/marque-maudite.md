@@ -28,30 +28,53 @@ Sceau maudit **vivant** et **très puissant**, pensé pour être **joué au fil 
 
 ## Définition
 
-La **marque maudite** n'est pas un simple sceau : c'est un **fragment de chakra corrompu doté d'une volonté propre**, greffé dans la chair du porteur. Elle lui offre une **puissance considérable** — mais chaque goutte de cette puissance est un **emprunt**, et la marque réclame toujours son dû. Tant qu'elle dort, elle n'est qu'un motif noir sur la peau. Éveillée, elle **respire, se nourrit, et grandit**.
+La **marque maudite** n'est pas un simple sceau : c'est un **fragment de chakra corrompu doté d'une volonté propre**, greffé dans la chair du porteur. Elle lui offre une **puissance considérable** — mais chaque goutte de cette puissance est un **emprunt**, et la marque réclame toujours son dû. Tant qu'elle dort, elle n'est qu'un motif noir sur la peau. Éveillée, elle **respire, se nourrit et grandit**.
 
-C'est un sceau conçu pour **durer dans le temps** et se jouer par étapes : une lente descente entre le pouvoir et la perte de soi.
+## Origine — le maître déchu du Conclave
+
+Parmi les maîtres du **Conclave**, l'un d'eux ne trouvait plus sa place au sein du fuinjutsu tel qu'il était pratiqué. À ses yeux, cet art se limitait désormais à **préserver, enfermer et protéger**, alors qu'il recelait un potentiel bien plus vaste. Convaincu qu'il était possible d'aller au-delà des connaissances établies, il se mit en quête d'une nouvelle voie.
+
+Profitant de son accès aux **archives les plus anciennes** du Conclave, il entreprit de longues recherches et rassembla de nombreux écrits traitant d'expérimentations oubliées et de **théories interdites**. Sans prévenir ses pairs, il quitta finalement le sanctuaire en emportant avec lui ces précieux manuscrits.
+
+Son ambition était claire : concevoir un sceau capable d'être **apposé directement sur un être vivant** afin d'**amplifier ses capacités physiques et spirituelles**, de repousser les limites naturelles du corps et de le rapprocher d'une forme de **perfection**.
+
+Cependant, les améliorations apportées par ce sceau eurent des conséquences qu'il n'avait ni prévues, ni maîtrisées. À mesure que les expérimentations progressaient, le pouvoir conféré par la marque **altérait le corps et l'esprit** de ses porteurs. Ce qui devait être une évolution devint une **transformation incontrôlable**.
+
+Aveuglé par son obsession de la perfection, il poursuivit ses recherches sans tenir compte des vies qu'il brisait. Les volontaires, puis les sujets qu'il **sélectionnait lui-même**, cessèrent d'être des individus à ses yeux : ils n'étaient plus que des **cobayes**, de simples réceptacles destinés à éprouver les limites de son fuinjutsu.
+
+Au fil des années, les essais se multiplièrent et les échecs s'accumulèrent. Certains sujets **périrent**, d'autres **sombrèrent dans la folie**, tandis que les plus résistants furent **irrémédiablement transformés**. Ainsi commencèrent les premières expérimentations qui donneraient naissance à ce qui serait plus tard connu sous le nom de **Marque Maudite**. Les rares survivants de cette époque subsistent encore aujourd'hui, cachés aux yeux du monde — non plus des shinobi, mais des **expériences vivantes** du fuinjutsu, condamnées à porter les stigmates de l'ambition démesurée de leur créateur.
+
+## L'expérimentateur d'Ame
+
+Contraint à l'exil, le maître déchu trouva refuge à **Ame**, où il se lia à **Soju Baku**, référent fuin du village. Il y établit un **repaire** discret et reprit ses travaux dans l'ombre.
+
+Il observe, il attire, il choisit. Les **âmes trop curieuses** — celles qui rôdent autour de ses secrets, qui posent trop de questions — deviennent la matière de ses recherches. À leurs yeux, il n'est parfois qu'un vieil érudit ; ils ne comprennent que trop tard ce qu'il attend d'eux.
+
+:::caution[Note de trame — meneur]
+- Le personnage mène de **nombreux tests** sur des joueurs. **Aucun ne reçoit une marque fonctionnelle** : ce ne sont que des **échecs**. Chaque expérimentation inflige à la cible des **conséquences** durables — mutations, séquelles, troubles mentaux, affaiblissement.
+- **Mécanique :** toute cible soumise à une expérimentation **joue un loose** (état négatif à incarner en RP), sans obtenir de pouvoir en retour.
+- **Le tournant :** un jour, **un seul** joueur recevra la **première marque réussie** — **unique** — qui, elle, **se développera** ensuite selon les paliers et la progression décrits plus bas.
+- Chaque étape reste soumise à **validation du staff**.
+:::
 
 ## Une marque vivante
 
-La marque possède une forme d'**instinct**, hérité du chakra dont elle est née. Elle n'est pas intelligente comme un être humain, mais elle **veut** — elle veut survivre, s'étendre, et être nourrie.
+La marque possède une forme d'**instinct**, hérité du chakra dont elle est née. Elle n'est pas intelligente comme un être humain, mais elle **veut** — survivre, s'étendre, être nourrie.
 
-- Elle **réagit aux émotions fortes** du porteur : la colère, la peur, la douleur et la haine la réveillent et la renforcent.
+- Elle **réagit aux émotions fortes** du porteur : colère, peur, douleur et haine la réveillent et la renforcent.
 - Elle **murmure**. Dans les moments de faiblesse, le porteur perçoit une **pulsion étrangère** : une envie de frapper, de céder, de laisser faire. Plus la marque est nourrie, plus la voix est claire.
-- Elle **s'étend physiquement** : d'un simple motif, elle progresse en volutes noires sur la peau à mesure qu'elle gagne du terrain — jusqu'à recouvrir le corps aux stades avancés.
-- Coupée de sa source, laissée dormante trop longtemps, elle **s'affaiblit** ; sur-sollicitée, elle **prend le dessus**.
+- Elle **s'étend physiquement** : d'un simple motif, elle progresse en volutes noires sur la peau — jusqu'à recouvrir le corps aux stades avancés.
+- Coupée de sa source ou laissée dormante trop longtemps, elle **s'affaiblit** ; sur-sollicitée, elle **prend le dessus**.
 
 ## La consumation du porteur
 
 Le pouvoir de la marque n'est jamais gratuit : elle **se nourrit du porteur lui-même**.
 
-- Chaque activation **prélève sur la force vitale et le chakra** de l'hôte. Un usage bref fatigue ; un usage prolongé **brûle** l'endurance, laisse le corps meurtri, parfois marqué de séquelles.
-- À long terme, la marque **érode le corps et l'esprit** : douleurs chroniques, poussées de fièvre noire, cauchemars, accès de rage. Le porteur **vieillit mal**, son chakra se teinte.
-- Si la marque est nourrie sans limite, elle finit par **consumer entièrement** son hôte — corps et volonté — jusqu'à ne laisser qu'une coquille dominée par le chakra corrompu. C'est l'issue que toute trame de marque maudite met en jeu : **jusqu'où le porteur ira-t-il avant de se perdre ?**
+- Chaque activation **prélève sur la force vitale et le chakra** de l'hôte. Un usage bref fatigue ; un usage prolongé **brûle** l'endurance et laisse des séquelles.
+- À long terme, la marque **érode le corps et l'esprit** : douleurs chroniques, fièvres, cauchemars, accès de rage. Le chakra de l'hôte se **teinte**.
+- Nourrie sans limite, elle finit par **consumer entièrement** son porteur — corps et volonté — jusqu'à ne laisser qu'une coquille dominée par le chakra corrompu. C'est l'enjeu de toute trame de marque maudite : **jusqu'où le porteur ira-t-il avant de se perdre ?**
 
 ## Les paliers de puissance
-
-La marque se libère par **paliers**, de plus en plus puissants et de plus en plus dangereux.
 
 | Palier | Effet | Coût |
 |---|---|---|
@@ -64,18 +87,16 @@ La marque se libère par **paliers**, de plus en plus puissants et de plus en pl
 
 ## La corruption : progression *(idée de trame)*
 
-Une trame de marque maudite peut se dérouler en **étapes**, à jouer sur la durée :
-
 1. **La greffe** — la marque est posée. Douleur initiale, puis un pouvoir grisant. Tout semble sous contrôle.
 2. **L'accoutumance** — le porteur y recourt de plus en plus. Les murmures commencent, la marque s'étend un peu.
 3. **L'emprise** — pertes de contrôle ponctuelles, actes que le porteur ne se reconnaît pas. Ses proches s'inquiètent.
 4. **La bascule** — la marque réclame plus qu'il ne peut donner. Il faut **choisir** : la contenir, la faire retirer (au péril de sa vie), ou l'embrasser.
 5. **La résolution** — libération, scellement, mort, ou perte totale de soi. La fin appartient au joueur et au staff.
 
-## Origine et pose
+## Pose et lien
 
-- La marque exige une **source de chakra corrompu particulière** (un maître détenteur du procédé, un artefact, une créature scellée…). Elle ne s'improvise pas.
-- Elle est **apposée par contact** sur la peau, généralement à un endroit visible (nuque, épaule, torse), au terme d'un rituel douloureux.
+- La marque exige une **source de chakra corrompu particulière** (le créateur, un artefact, une créature scellée…). Elle ne s'improvise pas.
+- Elle est **apposée par contact** sur la peau, à un endroit généralement visible (nuque, épaule, torse), au terme d'un rituel douloureux.
 - Le **poseur garde un lien** avec la marque : selon les cas, il peut la renforcer, l'apaiser, ou la déclencher à distance.
 
 ## Contenir ou retirer la marque
