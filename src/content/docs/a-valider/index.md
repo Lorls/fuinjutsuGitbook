@@ -18,13 +18,13 @@ Une fois un sceau validé, il quitte cette section pour rejoindre son cercle dé
 ## Sceaux utilitaires
 
 - [Sceau réparateur](/a-valider/reparateur/) — utilitaire *(1er cercle)*
+- [Sceau de localisation](/a-valider/localisation/) — traçage *(3ème cercle)*
 
 ## Juinjutsu (sceaux maudits)
 
 - [Marque maudite](/a-valider/marque-maudite/) — puissance/corruption *(5ème cercle)*
 - [Sceau de la langue scellée](/a-valider/langue-scellee/) — anti-divulgation *(3ème cercle)*
 - [Sceau maudit des représailles](/a-valider/represailles/) — sceau-suicide *(4ème cercle)*
-- [Sceau maudit de convocation](/a-valider/convocation-maudite/) — contrôle *(3ème cercle)*
 - [Sceau de transfert d'âme](/a-valider/transfert-ame/) — kinjutsu *(5ème cercle)*
 - [Sceau de corruption vitale](/a-valider/corruption-vitale/) — drain *(4ème cercle)*
 
@@ -33,9 +33,9 @@ Une fois un sceau validé, il quitte cette section pour rejoindre son cercle dé
 | Sceau | Kanjis | Signification |
 |---|---|---|
 | Sceau réparateur | 接 合 | 接合 (setsugō) — jonction / assemblage |
+| Sceau de localisation | 探 知 追 跡 | 探知 (détecter) + 追跡 (suivre) |
 | Marque maudite | 呪 印 天 力 | 呪印 (sceau maudit) + ciel + puissance |
 | Langue scellée | 舌 呪 封 印 | langue + malédiction + sceller |
 | Représailles | 裏 四 象 封 印 | 裏四象封印 — scellement inversé des 4 symboles |
-| Convocation maudite | 呪 召 追 印 | malédiction + convoquer + traquer |
 | Transfert d'âme | 魂 転 呪 印 | âme + transfert + malédiction |
 | Corruption vitale | 呪 蝕 生 印 | malédiction + éroder + vie |
