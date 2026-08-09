@@ -1,0 +1,78 @@
+---
+import { documents, groups, docsFor } from '../lib/content';
+import '../styles/custom.css';
+
+interface Props { title: string; description?: string; activeSlug?: string; }
+const { title, description = "Archives du Fuinjutsu de Zenkai", activeSlug = '' } = Astro.props;
+const searchData = documents.map(({ title, slug, circle, excerpt }) => ({ title, slug, circle, excerpt }));
+---
+
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" />
+    <title>{title} · Fuinjutsu — Zenkai</title>
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Retour à l'accueil"><span>封</span><b>Fuinjutsu</b><em>Archives de Zenkai</em></a>
+      <nav class="top-actions" aria-label="Actions">
+        <button class="search-trigger" type="button" data-search-open><kbd>⌘</kbd> Rechercher</button>
+        <button class="icon-button" type="button" aria-label="Changer le thème" data-theme-toggle>☾</button>
+        <button class="menu-toggle" type="button" aria-label="Ouvrir le sommaire" data-menu-toggle><i></i><i></i></button>
+      </nav>
+    </header>
+    <div class="shell">
+      <aside class="codex-nav" data-navigation>
+        <p class="nav-overline">Sommaire du grimoire</p>
+        {groups.map((group) => {
+          const entries = docsFor(group.key);
+          return entries.length ? <section class="nav-group">
+            <p><span>{group.glyph}</span>{group.label}</p>
+            <ul>{entries.map((entry) => <li><a class:list={[activeSlug === entry.slug && 'is-current', entry.isIndex && 'is-index']} href={entry.slug}>{entry.title}</a></li>)}</ul>
+          </section> : null;
+        })}
+      </aside>
+      <main><slot /></main>
+    </div>
+    <dialog class="search-dialog" data-search-dialog>
+      <div class="search-sheet">
+        <div class="search-header"><span>⌕</span><input type="search" placeholder="Rechercher un sceau, un kanji…" data-search-input autofocus /><button type="button" data-search-close>Fermer</button></div>
+        <div class="search-results" data-search-results></div>
+        <p class="search-hint">Échap pour fermer · Entrée pour ouvrir</p>
+      </div>
+    </dialog>
+    <script define:vars={{ searchData }}>
+      window.__fuinjutsuSearch = searchData;
+    </script>
+    <script>
+      const searchData = window.__fuinjutsuSearch || [];
+      const root = document.documentElement;
+      const dialog = document.querySelector('[data-search-dialog]');
+      const input = document.querySelector('[data-search-input]');
+      const results = document.querySelector('[data-search-results]');
+      const nav = document.querySelector('[data-navigation]');
+      document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+        root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      });
+      document.querySelector('[data-menu-toggle]')?.addEventListener('click', () => nav?.classList.toggle('is-open'));
+      const render = (term = '') => {
+        const query = term.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase();
+        const found = searchData.filter((doc) => `${doc.title} ${doc.excerpt}`.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase().includes(query)).slice(0, 10);
+        results.innerHTML = found.length ? found.map((doc) => `<a href="${doc.slug}"><small>${doc.circle.replace(/-/g, ' ')}</small><strong>${doc.title}</strong><span>${doc.excerpt}</span></a>`).join('') : '<p class="empty-search">Aucune archive trouvée.</p>';
+      };
+      const openSearch = () => { dialog.showModal(); render(); requestAnimationFrame(() => input.focus()); };
+      document.querySelector('[data-search-open]')?.addEventListener('click', openSearch);
+      document.querySelector('[data-search-close]')?.addEventListener('click', () => dialog.close());
+      input?.addEventListener('input', (event) => render(event.target.value));
+      window.addEventListener('keydown', (event) => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); openSearch(); } });
+      import('motion').then(({ animate, stagger }) => {
+        animate('[data-reveal]', { opacity: [0, 1], y: [20, 0] }, { delay: stagger(.075), duration: .6, easing: [.22, 1, .36, 1] });
+      });
+    </script>
+  </body>
+</html>

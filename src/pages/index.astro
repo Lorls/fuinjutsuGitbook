@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { groups, docsFor } from '../lib/content';
+const circles = groups.filter((group) => !['general', 'a-valider'].includes(group.key));
+---
+
+<BaseLayout title="Fuinjutsu" description="Le codex du Fuinjutsu sur Zenkai">
+  <section class="landing-hero">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow">Archives scellées · Conclave de Zenkai</p>
+      <h1>L’art de<br /><i>l’empreinte.</i></h1>
+      <p class="hero-lede">Un codex vivant pour celles et ceux qui apprennent à lier le chakra, les mots et les destinées.</p>
+      <div class="hero-ctas"><a href="/regles-generales/" class="button button--ink">Lire les fondations <span>→</span></a><button class="button button--ghost" data-search-open>Explorer les archives</button></div>
+    </div>
+    <div class="hero-sigil" aria-hidden="true" data-reveal>
+      <div class="orbit orbit--one"></div><div class="orbit orbit--two"></div><div class="orbit orbit--three"></div>
+      <span>封</span><small>Fūin</small>
+    </div>
+    <p class="hero-note" data-reveal>Les kanjis ne s’écrivent jamais seuls.<br />Chaque trait engage le chakra de son auteur.</p>
+  </section>
+  <section class="home-section" data-reveal>
+    <div class="section-heading"><p>Les voies du scellement</p><h2>Choisir son cercle.</h2><span>01 — 05</span></div>
+    <div class="circle-grid">
+      {circles.map((circle, index) => {
+        const first = docsFor(circle.key)[0];
+        return <a href={first?.slug ?? '/'} class:list={['circle-card', `circle-card--${index + 1}`]} data-reveal>
+          <span class="circle-glyph">{circle.glyph}</span><span class="circle-number">0{index + 1}</span>
+          <h3>{circle.label}</h3><p>{circle.description}</p><b>Ouvrir le cercle <i>↗</i></b>
+        </a>;
+      })}
+    </div>
+  </section>
+  <section class="home-section split-section" data-reveal>
+    <div class="ritual-card"><p class="eyebrow">Principe fondateur</p><span>二</span><h2>Deux kanjis.<br />Un équilibre.</h2><p>L’apprentissage de la calligraphie et du contrôle du chakra forment le cœur du Fuinjutsu.</p><a href="/regles-generales/">Consulter les règles <i>→</i></a></div>
+    <div class="archive-list"><div class="section-heading"><p>Accès direct</p><h2>Les archives.</h2></div>
+      {groups.filter((group) => ['general', 'sceaux-de-clan', 'a-valider'].includes(group.key)).map((group) => { const first = docsFor(group.key)[0]; return <a href={first?.slug ?? '/'}><span>{group.glyph}</span><div><small>{group.key === 'a-valider' ? 'Sous observation' : 'Dossier'}</small><strong>{group.label}</strong></div><i>→</i></a>; })}
+    </div>
+  </section>
+</BaseLayout>

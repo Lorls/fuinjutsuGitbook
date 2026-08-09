@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { documents, docsFor } from '../lib/content';
+
+export function getStaticPaths() { return documents.map((doc) => ({ params: { slug: doc.slug.replace(/^\/|\/$/g, '') }, props: { doc } })); }
+const { doc } = Astro.props;
+const siblings = docsFor(doc.circle).filter((entry) => !entry.isIndex && entry.slug !== doc.slug);
+const groupName = { 'premier-cercle': 'Premier cercle', 'deuxieme-cercle': 'Deuxième cercle', 'troisieme-cercle': 'Troisième cercle', 'quatrieme-cercle': 'Quatrième cercle · Maître', 'cinquieme-cercle': 'Cinquième cercle · Grand Maître', 'sceaux-de-clan': 'Sceaux de clan', 'a-valider': 'Archives instables', general: 'Fondations' }[doc.circle];
+---
+
+<BaseLayout title={doc.title} description={doc.description || doc.excerpt} activeSlug={doc.slug}>
+  <article class:list={['archive-page', `archive-page--${doc.circle}`]}>
+    <header class="archive-header" data-reveal>
+      <a class="breadcrumb" href={doc.circle === 'general' ? '/' : `/${doc.circle}/`}>⌁ {groupName}</a>
+      <p class="archive-index">{doc.circle === 'general' ? 'Dossier source' : 'Archive de scellement'}</p>
+      <h1>{doc.title}</h1>
+      {doc.description && <p class="archive-description">{doc.description}</p>}
+      <div class="title-rule"><span></span><i>封</i><span></span></div>
+    </header>
+    <div class="article-grid">
+      <aside class="article-meta" data-reveal><span>Codex</span><b>{doc.circle === 'general' ? '00' : groupName?.match(/^\w+/)?.[0]}</b><p>Les archives du Conclave sont actualisées à mesure que les sceaux sont découverts.</p></aside>
+      <div class="archive-content" data-reveal set:html={doc.html}></div>
+    </div>
+    {siblings.length > 0 && <footer class="related-archives" data-reveal><p>Continuer l’étude</p><div>{siblings.slice(0, 3).map((entry) => <a href={entry.slug}><span>封</span><div><small>{groupName}</small><strong>{entry.title}</strong></div><i>↗</i></a>)}</div></footer>}
+  </article>
+</BaseLayout>
