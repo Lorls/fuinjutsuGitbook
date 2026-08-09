@@ -90,7 +90,7 @@ Le pouvoir de la marque n'est jamais gratuit : elle **se nourrit du porteur lui-
 1. **La greffe** — la marque est posée. Douleur initiale, puis un pouvoir grisant. Tout semble sous contrôle.
 2. **L'accoutumance** — le porteur y recourt de plus en plus. Les murmures commencent, la marque s'étend un peu.
 3. **L'emprise** — pertes de contrôle ponctuelles, actes que le porteur ne se reconnaît pas. Ses proches s'inquiètent.
-4. **La bascule** — la marque réclame plus qu'il ne peut donner. Il faut **choisir** : la contenir, la faire retirer (au péril de sa vie), ou l'embrasser.
+4. **La bascule** — la marque réclame plus qu'il ne peut donner. Il faut **choisir** : la contenir, tenter de la **dominer**, ou l'embrasser.
 5. **La résolution** — libération, scellement, mort, ou perte totale de soi. La fin appartient au joueur et au staff.
 
 ## Pose et lien
@@ -99,11 +99,14 @@ Le pouvoir de la marque n'est jamais gratuit : elle **se nourrit du porteur lui-
 - Elle est **apposée par contact** sur la peau, à un endroit généralement visible (nuque, épaule, torse), au terme d'un rituel douloureux.
 - Le **poseur garde un lien** avec la marque : selon les cas, il peut la renforcer, l'apaiser, ou la déclencher à distance.
 
-## Contenir ou retirer la marque
+## Contenir ou dominer la marque
 
-- Le [sceau de l'endiguement du mal](/quatrieme-cercle/endiguement-du-mal/) permet de **contenir** la marque : il l'endort et bride son influence, sans la retirer. Il peut **céder** si la marque est trop nourrie.
-- Le [désenclavement](/troisieme-cercle/desenclavement/) peut **retirer** la marque — mais l'opération est **extrêmement risquée** : une marque bien ancrée se défend, et l'échec peut tuer le porteur.
-- Laissée à elle-même, la marque **ne disparaît jamais seule**.
+La marque **ne peut pas être désenclavée** : elle est trop vivante, trop ancrée dans la chair et l'âme pour être simplement retirée. Il n'existe que **deux issues** :
+
+- **La contenir** — le [sceau de l'endiguement du mal](/quatrieme-cercle/endiguement-du-mal/) l'endort et bride son influence, **sans la retirer**. Il peut **céder** si la marque est trop nourrie.
+- **Prendre le dessus** — par sa seule **volonté**, le porteur peut **dominer la marque** et la plier à son propre contrôle. C'est extrêmement difficile : rares sont ceux qui y parviennent, et l'échec, c'est la marque qui l'emporte.
+
+Laissée à elle-même, la marque **ne disparaît jamais seule**.
 
 ## Kanjis
 
@@ -119,7 +122,7 @@ Le cœur reprend **呪印** (juin, « sceau maudit »), marqué du Ciel et de la
 - Apposée par **contact** ; nécessite une **source de chakra spéciale** validée par le staff.
 - Offre un **gain de puissance** par paliers, au prix d'une **consumation** du porteur et d'un risque croissant de **perte de contrôle**.
 - Le passage **niveau 2** et au-delà, ainsi que toute **perte de contrôle**, se jouent **sur scène validée**.
-- Ne peut être **contenue** que par l'endiguement du mal, **retirée** que par désenclavement (au péril du porteur).
+- **Ne peut pas être désenclavée** : les seules issues sont la **contenir** (endiguement du mal) ou **prendre le dessus** sur elle par la volonté du porteur.
 
 ## Règles HRP (obligatoires)
 
