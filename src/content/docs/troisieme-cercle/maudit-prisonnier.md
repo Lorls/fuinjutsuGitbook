@@ -21,7 +21,7 @@ sidebar:
 
 ## Définition
 
-Sceau placé sur un individu afin de **contrôler ses actions**, **limiter sa liberté** ou **garantir son obéissance**. Il agit comme une **sanction permanente** avec des conditions imposées.
+Sceau placé sur un individu afin de **contrôler ses actions**, **limiter sa liberté** ou **garantir son obéissance**. Il agit comme une **sanction temporaire** avec des conditions imposées.
 
 ## Kanjis
 
@@ -36,6 +36,7 @@ Le cœur forme le mot **呪印** (juin, « sceau maudit »), qui lie, soumet et 
 ## Règles
 
 - Cible **capturée, consentante ou en pain**.
+- Le sceau est **temporaire** : sa **durée** est fixée à la pose (validée par le MJ) ; il se **dissipe au terme**, ou si le poseur le **retire** ou **meurt**.
 - Les **conditions** doivent être clairement définies, **à l'oral et à l'écrit**.
 - **Obligation de consulter un MJ Fuin** ou un membre du staff pour poser ce genre de sceau.
 - Une fois les conditions apposées, elles ne sont **plus modifiables**.
