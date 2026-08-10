@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://fuinjutsu.local',
+  site: 'https://fuinjutsu.builtbyloris.dev',
 });
