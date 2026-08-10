@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Contenu lisible par un LLM
+# Index : /llms.txt
+# Texte intégral : /llms-full.txt
