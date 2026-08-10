@@ -22,6 +22,7 @@ Le [Désenclavement de sceau](/troisieme-cercle/desenclavement/) est le premier 
 - [Pacte de sang](/troisieme-cercle/pacte-de-sang/)
 - [Sceau maudit du prisonnier](/troisieme-cercle/maudit-prisonnier/)
 - [Sceau de réserve vitale](/troisieme-cercle/reserve-vitale/)
+- [Sceau de localisation](/troisieme-cercle/localisation/)
 
 ## Kanjis obligatoires (4 à 6 kanjis)
 
@@ -35,6 +36,7 @@ Le [Désenclavement de sceau](/troisieme-cercle/desenclavement/) est le premier 
 | Pacte de sang | 血 契 約 印 | 契約 (contrat) scellé par le sang |
 | Maudit du prisonnier | 呪 印 縛 従 罰 | 呪印 (sceau maudit) + lier, soumettre, punir |
 | Réserve vitale | 生 命 蓄 気 | 生命 (vie) + accumuler l'énergie |
+| Localisation | 探 知 追 跡 | 探知 (détecter) + 追跡 (suivre) |
 
 :::note
 **Drain de chakra :** ajouter des **spirales emprisonnées** aux 4 coins du sceau, mais à l'intérieur du cercle.

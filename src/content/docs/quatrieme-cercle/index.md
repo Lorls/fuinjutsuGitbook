@@ -19,6 +19,8 @@ Ces sceaux ont des conséquences pouvant aller **jusqu'à la mort** de la cible.
 - [Sceau de formations de flammes violettes](/quatrieme-cercle/flammes-violettes/)
 - [Sceau d'absorption de chakra](/quatrieme-cercle/absorption-chakra/)
 - [Sceau d'effacement de mémoire](/quatrieme-cercle/effacement-memoire/)
+- [Sceau de corruption vitale](/quatrieme-cercle/corruption-vitale/)
+- [Sceau maudit des représailles](/quatrieme-cercle/represailles/)
 
 ## Kanjis
 
@@ -29,3 +31,5 @@ Ces sceaux ont des conséquences pouvant aller **jusqu'à la mort** de la cible.
 | Formations de flammes violettes | 四 紫 炎 陣 | quatre + violet + flamme + formation |
 | Absorption de chakra | 吸 収 気 盾 | 吸収 (kyūshū, absorption) + chakra + bouclier |
 | Effacement de mémoire | 記 憶 封 印 | 記憶封印 — scellement de la mémoire |
+| Corruption vitale | 呪 蝕 生 印 | malédiction + éroder + vie |
+| Représailles | 裏 四 象 封 印 | 裏四象封印 — scellement inversé des 4 symboles |

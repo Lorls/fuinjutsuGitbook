@@ -1,30 +1,30 @@
 ---
 title: Marque maudite
-description: Juinjutsu vivant qui décuple la puissance du porteur tout en le consumant lentement. Proposition à valider — pensée pour une trame.
+description: Juinjutsu vivant du 5ème cercle qui décuple la puissance du porteur tout en le consumant lentement — pensé pour une trame.
 sidebar:
   order: 4
   badge:
-    text: À valider
-    variant: caution
+    text: Interdit
+    variant: danger
 ---
 
 <figure class="seal-icon">
-<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#c026d3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="24" cy="24" r="21" opacity="0.3"/>
-  <path d="M24 13 a3.2 3.2 0 1 1 -2.4 5.6 c-1.6 -2.4 -0.6 -4.6 2.4 -5.6 Z" fill="#ea580c" stroke="none"/>
-  <path d="M24 13 a3.2 3.2 0 1 1 -2.4 5.6 c-1.6 -2.4 -0.6 -4.6 2.4 -5.6 Z" fill="#ea580c" stroke="none" transform="rotate(120 24 24)"/>
-  <path d="M24 13 a3.2 3.2 0 1 1 -2.4 5.6 c-1.6 -2.4 -0.6 -4.6 2.4 -5.6 Z" fill="#ea580c" stroke="none" transform="rotate(240 24 24)"/>
-  <circle cx="24" cy="24" r="2" fill="#ea580c" stroke="none"/>
+  <path d="M24 13 a3.2 3.2 0 1 1 -2.4 5.6 c-1.6 -2.4 -0.6 -4.6 2.4 -5.6 Z" fill="#c026d3" stroke="none"/>
+  <path d="M24 13 a3.2 3.2 0 1 1 -2.4 5.6 c-1.6 -2.4 -0.6 -4.6 2.4 -5.6 Z" fill="#c026d3" stroke="none" transform="rotate(120 24 24)"/>
+  <path d="M24 13 a3.2 3.2 0 1 1 -2.4 5.6 c-1.6 -2.4 -0.6 -4.6 2.4 -5.6 Z" fill="#c026d3" stroke="none" transform="rotate(240 24 24)"/>
+  <circle cx="24" cy="24" r="2" fill="#c026d3" stroke="none"/>
 </svg>
 </figure>
 
-:::danger[À valider — Juinjutsu de trame]
-Sceau maudit **vivant** et **très puissant**, pensé pour être **joué au fil d'une trame**. Il nécessite une **source de chakra spéciale**, un fort encadrement, le **consentement HRP** du porteur et une **validation du staff / MJ Fuin obligatoire** à chaque palier. Kanjis et règles **proposés** (canon 呪印).
+:::danger[Juinjutsu de trame]
+Sceau maudit **vivant** et **très puissant**, pensé pour être **joué au fil d'une trame**. Il nécessite une **source de chakra spéciale**, un fort encadrement, le **consentement HRP** du porteur et une **validation du staff / MJ Fuin obligatoire** à chaque palier.
 :::
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 5ème cercle *(proposé)* | 呪 印 天 力 | Validation staff obligatoire |
+| 5ème cercle | 呪 印 天 力 | Validation staff obligatoire |
 
 ## Définition
 
@@ -117,7 +117,7 @@ Le cœur reprend **呪印** (juin, « sceau maudit »), marqué du Ciel et de la
 - **天** — ciel *(variante **地** — Terre)*
 - **力** — puissance / force
 
-## Règles *(proposées)*
+## Règles
 
 - Apposée par **contact** ; nécessite une **source de chakra spéciale** validée par le staff.
 - Offre un **gain de puissance** par paliers, au prix d'une **consumation** du porteur et d'un risque croissant de **perte de contrôle**.

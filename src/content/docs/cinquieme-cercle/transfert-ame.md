@@ -1,15 +1,15 @@
 ---
 title: Sceau de transfert d'âme
-description: Kinjutsu d'immortalité qui transfère l'âme du lanceur dans un corps-réceptacle. Proposition à valider.
+description: Kinjutsu d'immortalité du 5ème cercle qui transfère l'âme du lanceur dans un corps-réceptacle.
 sidebar:
-  order: 8
+  order: 5
   badge:
-    text: À valider
-    variant: caution
+    text: Interdit
+    variant: danger
 ---
 
 <figure class="seal-icon">
-<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#c026d3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="24" cy="24" r="21" opacity="0.3"/>
   <circle cx="15" cy="20" r="6"/>
   <circle cx="33" cy="20" r="6"/>
@@ -18,13 +18,13 @@ sidebar:
 </svg>
 </figure>
 
-:::danger[À valider — Kinjutsu interdit]
-Technique **interdite** d'immortalité. Validation staff **obligatoire**, événementiel, **accord HRP** des joueurs concernés. Kanjis et règles **proposés**.
+:::danger[Kinjutsu interdit]
+Technique **interdite** d'immortalité. Validation staff **obligatoire**, événementiel, **accord HRP** des joueurs concernés.
 :::
 
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 5ème cercle *(proposé)* | 魂 転 呪 印 | Validation staff obligatoire |
+| 5ème cercle | 魂 転 呪 印 | Validation staff obligatoire |
 
 ## Définition
 
@@ -37,7 +37,7 @@ Technique **interdite** d'immortalité. Validation staff **obligatoire**, évén
 - **呪** — malédiction
 - **印** — sceau / marque
 
-## Règles *(proposées)*
+## Règles
 
 - **Kinjutsu interdit** : réservé à l'événementiel très encadré.
 - Nécessite un **corps-réceptacle vivant** (sacrifice ou consentant).
