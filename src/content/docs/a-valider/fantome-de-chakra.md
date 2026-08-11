@@ -1,5 +1,5 @@
 ---
-title: Sceau du spectre murmurant
+title: Sceau des murmures
 description: Sceau posé sur une cible qui permet au poseur d'apparaître auprès d'elle sous forme de spectre de chakra pour lui parler. Proposition à valider.
 sidebar:
   order: 1

@@ -19,7 +19,7 @@ Une fois un sceau validé, il quitte cette section pour rejoindre son cercle dé
 
 - [Sceau réparateur](/a-valider/reparateur/) — utilitaire *(1er cercle)*
 - [Sceau d'ancrage](/a-valider/ancrage/) — utilitaire *(2ème cercle)*
-- [Sceau du spectre murmurant](/a-valider/fantome-de-chakra/) — communication *(4ème cercle)*
+- [Sceau des murmures](/a-valider/fantome-de-chakra/) — communication *(4ème cercle)*
 
 ## Juinjutsu (sceaux maudits)
 
@@ -31,5 +31,5 @@ Une fois un sceau validé, il quitte cette section pour rejoindre son cercle dé
 |---|---|---|
 | Sceau réparateur | 接 合 | 接合 (setsugō) — jonction / assemblage |
 | Sceau d'ancrage | 固 定 | 固定 (kotei) — fixation |
-| Sceau du spectre murmurant | 念 幻 気 印 | volonté + fantôme + chakra + sceau |
+| Sceau des murmures | 念 幻 気 印 | volonté + fantôme + chakra + sceau |
 | Langue scellée | 舌 呪 封 印 | langue + malédiction + sceller |
