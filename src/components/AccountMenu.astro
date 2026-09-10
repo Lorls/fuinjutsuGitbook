@@ -1,0 +1,41 @@
+---
+interface Props {
+  user: { username: string; rank: number; is_staff: boolean } | null;
+}
+const { user } = Astro.props;
+const initial = user?.username?.charAt(0).toUpperCase() ?? '?';
+const rankLabel = user ? (user.is_staff ? 'Staff' : `Cercle ${user.rank}`) : '';
+---
+
+{user ? (
+  <div class="account" data-account>
+    <button class="account-btn" type="button" data-account-toggle aria-haspopup="true" aria-expanded="false">
+      <span class="account-avatar">{initial}</span>
+      <span class="account-meta"><b>{user.username}</b><em>{rankLabel}</em></span>
+      <span class="account-caret" aria-hidden="true">▾</span>
+    </button>
+    <div class="account-menu" data-account-menu hidden>
+      {user.is_staff && <a href="/admin">Administration</a>}
+      <form method="post" action="/api/logout"><button type="submit">Déconnexion</button></form>
+    </div>
+  </div>
+) : (
+  <a class="account-link" href="/login">Connexion</a>
+)}
+
+<script>
+  document.querySelectorAll('[data-account]').forEach((root) => {
+    const btn = root.querySelector('[data-account-toggle]');
+    const menu = root.querySelector('[data-account-menu]');
+    if (!btn || !menu) return;
+    const close = () => { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); };
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const willOpen = menu.hidden;
+      menu.hidden = !willOpen;
+      btn.setAttribute('aria-expanded', String(willOpen));
+    });
+    document.addEventListener('click', (e) => { if (!root.contains(e.target as Node)) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  });
+</script>

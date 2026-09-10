@@ -1,0 +1,56 @@
+---
+import '../styles/custom.css';
+import AccountMenu from '../components/AccountMenu.astro';
+import { adminNav } from '../lib/admin-nav';
+
+interface Props { title: string; active?: string; }
+const { title, active } = Astro.props;
+const user = Astro.locals.user;
+---
+
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" />
+    <title>{title} · Administration — Fuinjutsu</title>
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="topbar">
+      <a class="brand" href="/admin"><span>封</span><b>Fuinjutsu</b><em>Administration</em></a>
+      <nav class="top-actions" aria-label="Actions">
+        <a class="account-link" href="/">← Retour au site</a>
+        <button class="icon-button" type="button" aria-label="Changer le thème" data-theme-toggle>☾</button>
+        <AccountMenu user={user} />
+        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-toggle><i></i><i></i></button>
+      </nav>
+    </header>
+    <div class="shell">
+      <aside class="codex-nav" data-navigation>
+        <p class="nav-overline">Console</p>
+        <ul class="admin-menu">
+          {adminNav.map((item) => (
+            <li>
+              <a class:list={['admin-menu-link', active === item.key && 'is-current']} href={item.href}>
+                <span class="admin-menu-glyph">{item.glyph}</span>
+                <span class="admin-menu-text"><b>{item.label}</b>{item.hint && <em>{item.hint}</em>}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </aside>
+      <main><slot /></main>
+    </div>
+    <script>
+      const root = document.documentElement;
+      document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+        root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      });
+      const nav = document.querySelector('[data-navigation]');
+      document.querySelector('[data-menu-toggle]')?.addEventListener('click', () => nav?.classList.toggle('is-open'));
+    </script>
+  </body>
+</html>

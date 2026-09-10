@@ -1,0 +1,85 @@
+---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { requireStaff } from '../../lib/guard';
+import { db } from '../../lib/db';
+
+const denied = requireStaff(Astro);
+if (denied) return denied;
+
+const user = Astro.locals.user!;
+const rows = db
+  .prepare('SELECT id, username, rank_level, is_staff, created_at FROM users ORDER BY is_staff DESC, username')
+  .all() as Array<{ id: number; username: string; rank_level: number; is_staff: number; created_at: string }>;
+const msg = Astro.url.searchParams.get('msg');
+const ranks = [1, 2, 3, 4, 5];
+---
+
+<AdminLayout title="Comptes" active="comptes">
+  <div class="admin-page">
+    <header class="admin-head">
+      <p class="archive-index">Console staff</p>
+      <h1>Comptes</h1>
+      <p class="admin-lede">Crée les comptes des joueurs et fixe leur rang. Le rang détermine les archives visibles.</p>
+    </header>
+
+    {msg && <p class="admin-msg" data-flash>{msg}</p>}
+
+    <section class="admin-block">
+      <h2>Nouveau compte</h2>
+      <form class="admin-form admin-form--create" method="post" action="/api/admin/users">
+        <input type="hidden" name="action" value="create" />
+        <label>Nom<input name="username" required autocomplete="off" /></label>
+        <label>Mot de passe<input name="password" type="text" required minlength="4" autocomplete="off" /></label>
+        <label>Rang<select name="rank">{ranks.map((r) => <option value={r}>Cercle {r}</option>)}</select></label>
+        <label class="admin-check"><input type="checkbox" name="is_staff" value="1" /> Staff</label>
+        <button type="submit" class="button button--ink">Créer</button>
+      </form>
+    </section>
+
+    <section class="admin-block">
+      <h2>Comptes existants · {rows.length}</h2>
+      <div class="admin-table">
+        {rows.map((u) => (
+          <div class="admin-row">
+            <div class="admin-id">
+              <span class="admin-avatar">{u.username.charAt(0).toUpperCase()}</span>
+              <div>
+                <strong>{u.username}</strong>
+                <small>{u.is_staff ? 'Staff · voit tout' : `Cercle ${u.rank_level}`}</small>
+              </div>
+            </div>
+            <div class="admin-actions">
+              <form class="admin-inline" method="post" action="/api/admin/users">
+                <input type="hidden" name="action" value="update" />
+                <input type="hidden" name="id" value={u.id} />
+                <select name="rank">{ranks.map((r) => <option value={r} selected={r === u.rank_level}>Cercle {r}</option>)}</select>
+                <label class="admin-check"><input type="checkbox" name="is_staff" value="1" checked={!!u.is_staff} /> Staff</label>
+                <button type="submit">Enregistrer</button>
+              </form>
+              <form class="admin-inline" method="post" action="/api/admin/users">
+                <input type="hidden" name="action" value="password" />
+                <input type="hidden" name="id" value={u.id} />
+                <input name="password" type="text" placeholder="Nouveau mdp" minlength="4" autocomplete="off" />
+                <button type="submit">Réinit.</button>
+              </form>
+              {u.id !== user.id && (
+                <form class="admin-inline" method="post" action="/api/admin/users" onsubmit="return confirm('Supprimer ce compte ?')">
+                  <input type="hidden" name="action" value="delete" />
+                  <input type="hidden" name="id" value={u.id} />
+                  <button type="submit" class="admin-danger">Supprimer</button>
+                </form>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</AdminLayout>
+
+<script>
+  // Retire le message flash de l'URL après affichage.
+  if (location.search.includes('msg=')) {
+    setTimeout(() => history.replaceState(null, '', location.pathname), 10);
+  }
+</script>

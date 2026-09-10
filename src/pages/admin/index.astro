@@ -1,0 +1,61 @@
+---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { requireStaff } from '../../lib/guard';
+import { db } from '../../lib/db';
+import { adminNav } from '../../lib/admin-nav';
+
+const denied = requireStaff(Astro);
+if (denied) return denied;
+
+const total = (db.prepare('SELECT COUNT(*) AS c FROM users').get() as { c: number }).c;
+const staff = (db.prepare('SELECT COUNT(*) AS c FROM users WHERE is_staff = 1').get() as { c: number }).c;
+const byRank = db
+  .prepare('SELECT rank_level AS rank, COUNT(*) AS c FROM users WHERE is_staff = 0 GROUP BY rank_level')
+  .all() as Array<{ rank: number; c: number }>;
+const rankCount = (r: number) => byRank.find((x) => x.rank === r)?.c ?? 0;
+const maxRank = Math.max(1, ...byRank.map((x) => x.c));
+const shortcuts = adminNav.filter((i) => i.key !== 'dashboard');
+---
+
+<AdminLayout title="Tableau de bord" active="dashboard">
+  <div class="admin-page">
+    <header class="admin-head">
+      <p class="archive-index">Console staff</p>
+      <h1>Tableau de bord</h1>
+      <p class="admin-lede">Vue d'ensemble de l'accès au grimoire.</p>
+    </header>
+
+    <div class="admin-stats">
+      <div class="stat"><b>{total}</b><span>Comptes</span></div>
+      <div class="stat"><b>{staff}</b><span>Staff</span></div>
+      <div class="stat"><b>{total - staff}</b><span>Joueurs</span></div>
+    </div>
+
+    <section class="admin-block">
+      <h2>Répartition par cercle</h2>
+      <div class="rank-bars">
+        {[1, 2, 3, 4, 5].map((r) => (
+          <div class="rank-bar">
+            <span class="rank-bar-label">Cercle {r}</span>
+            <span class="rank-bar-track"><i style={`width:${(rankCount(r) / maxRank) * 100}%`}></i></span>
+            <span class="rank-bar-value">{rankCount(r)}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="admin-block">
+      <h2>Accès rapide</h2>
+      <div class="admin-cards">
+        {shortcuts.map((item) => (
+          <a class="admin-card" href={item.href}>
+            <span class="admin-card-glyph">{item.glyph}</span>
+            <strong>{item.label}</strong>
+            {item.hint && <small>{item.hint}</small>}
+            <i>↗</i>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</AdminLayout>

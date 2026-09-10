@@ -7,7 +7,7 @@ export const POST: APIRoute = async ({ request, locals, redirect }) => {
 
   const form = await request.formData();
   const action = String(form.get('action') ?? '');
-  const back = (msg: string) => redirect(`/admin?msg=${encodeURIComponent(msg)}`);
+  const back = (msg: string) => redirect(`/admin/comptes?msg=${encodeURIComponent(msg)}`);
 
   try {
     if (action === 'create') {
