@@ -1,29 +1,26 @@
 ---
 title: L'Hiraishin
-description: Sceau corporel et balises permettant une téléportation spatio-temporelle instantanée. Proposition à valider.
+description: Sceau de clan — sceau corporel et balises permettant une téléportation spatio-temporelle instantanée.
 sidebar:
-  order: 6
-  badge:
-    text: À valider
-    variant: caution
+  order: 4
 ---
 
 <figure class="seal-icon">
-<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="24" cy="24" r="21" opacity="0.3"/>
   <path d="M26 11 L15 25 H22 L20 37 L32 22 H25 Z"/>
-  <circle cx="11" cy="12" r="2" fill="#ea580c" stroke="none"/>
-  <circle cx="37" cy="36" r="2" fill="#ea580c" stroke="none"/>
+  <circle cx="11" cy="12" r="2" fill="#f59e0b" stroke="none"/>
+  <circle cx="37" cy="36" r="2" fill="#f59e0b" stroke="none"/>
 </svg>
 </figure>
 
-:::danger[À valider — technique suprême]
-Technique de téléportation légendaire (canon 飛雷神). Extrêmement puissante : validation du staff / MJ Fuin **obligatoire**, balises **prouvées** au préalable. Kanjis et règles **proposés**.
+:::danger[Technique suprême]
+Technique de téléportation légendaire (canon 飛雷神), **exclusive à un clan**. Extrêmement puissante : validation du staff / MJ Fuin **obligatoire**, balises **prouvées** au préalable.
 :::
 
-| Cercle | Kanjis | Roll |
+| Type | Kanjis | Roll |
 |---|---|---|
-| 5ème cercle *(proposé)* | 飛 雷 神 印 | > 50 (+ validation staff) |
+| Sceau de clan | 飛 雷 神 印 | > 50 (+ validation staff) |
 
 ## Définition
 
@@ -54,7 +51,7 @@ Les quatre kanjis forment **飛雷神** (Hiraishin, le « Dieu du Tonnerre Volan
 - **神** — dieu / divin
 - **印** — sceau / marque
 
-## Règles *(proposées)*
+## Règles
 
 - **Deux composantes** : le **sceau corporel** (sur l'utilisateur) et les **sceaux-balises** (points d'ancrage).
 - Les **balises doivent être placées à l'avance** — préciser leur emplacement via `/it` ou `/na` (preuve si BDA).

@@ -1,15 +1,12 @@
 ---
 title: Sceau d'ancrage
-description: Sceau qui fixe un objet en place et le rend inamovible. Proposition à valider.
+description: Sceau du 2ème cercle qui fixe un objet en place et le rend inamovible.
 sidebar:
-  order: 2
-  badge:
-    text: À valider
-    variant: caution
+  order: 4
 ---
 
 <figure class="seal-icon">
-<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="24" cy="24" r="21" opacity="0.3"/>
   <circle cx="24" cy="12" r="3"/>
   <path d="M24 15 V38"/>
@@ -19,13 +16,9 @@ sidebar:
 </svg>
 </figure>
 
-:::caution[À valider]
-Proposition en attente de validation du staff / MJ Fuin.
-:::
-
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 2ème cercle *(proposé)* | 固 定 (固定) | > 50 |
+| 2ème cercle | 固 定 (固定) | > 50 |
 
 ## Définition
 
@@ -38,7 +31,7 @@ Deux kanjis formant le mot **固定** (kotei, « fixation ») :
 - **固** — solidifier / rendre ferme
 - **定** — fixer / immobiliser
 
-## Règles *(proposées)*
+## Règles
 
 - Apposé au **contact direct** de l'objet.
 - L'objet devient **inamovible** tant que le sceau tient (résiste à la force normale).

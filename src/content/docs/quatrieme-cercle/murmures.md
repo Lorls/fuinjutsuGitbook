@@ -1,29 +1,22 @@
 ---
 title: Sceau des murmures
-description: Sceau posé sur une cible qui permet au poseur d'apparaître auprès d'elle sous forme de spectre de chakra pour lui parler. Proposition à valider.
+description: Sceau du 4ème cercle posé sur une cible qui permet au poseur d'apparaître auprès d'elle sous forme de spectre de chakra pour lui parler.
 sidebar:
-  order: 1
-  badge:
-    text: À valider
-    variant: caution
+  order: 9
 ---
 
 <figure class="seal-icon">
-<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ef4444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="24" cy="24" r="21" opacity="0.3"/>
   <path d="M15 33 V22 a9 9 0 0 1 18 0 V33 l-3 -2.5 l-3 2.5 l-3 -2.5 l-3 2.5 l-3 -2.5 l-3 2.5 Z"/>
-  <circle cx="20" cy="22" r="1.5" fill="#ea580c" stroke="none"/>
-  <circle cx="28" cy="22" r="1.5" fill="#ea580c" stroke="none"/>
+  <circle cx="20" cy="22" r="1.5" fill="#ef4444" stroke="none"/>
+  <circle cx="28" cy="22" r="1.5" fill="#ef4444" stroke="none"/>
 </svg>
 </figure>
 
-:::caution[À valider]
-Proposition en attente de validation du staff / MJ Fuin.
-:::
-
 | Cercle | Kanjis | Roll |
 |---|---|---|
-| 4ème cercle *(proposé)* | 念 幻 気 印 | > 50 |
+| 4ème cercle | 念 幻 気 印 | > 50 |
 
 ## Définition
 
@@ -40,7 +33,7 @@ Quatre kanjis — la volonté qui se manifeste en chakra fantôme :
 - **気** — chakra / énergie
 - **印** — sceau / marque
 
-## Règles *(proposées)*
+## Règles
 
 - Apposé par **contact** sur la cible (ou sur un objet qu'elle porte). Cible **capturée, consentante ou en pain** à la pose.
 - Seul le **poseur** peut activer la projection, quand il le souhaite, tant que le sceau tient.

@@ -13,6 +13,7 @@ Le 2ème cercle introduit la **manipulation avancée du chakra** : ériger des b
 - [Sceau de barrière](/deuxieme-cercle/barriere/)
 - [Sceau de dressage](/deuxieme-cercle/dressage/)
 - [Accumulation de chakra](/deuxieme-cercle/accumulation-de-chakra/)
+- [Sceau d'ancrage](/deuxieme-cercle/ancrage/)
 
 ## Kanjis obligatoires (2 à 4 kanjis)
 
@@ -21,3 +22,4 @@ Le 2ème cercle introduit la **manipulation avancée du chakra** : ériger des b
 | Barrière | 結 + 界 (+ 防) | 結界 (kekkai) — barrière + protection |
 | Dressage | 従 + 獣 | soumettre la bête |
 | Accumulation de chakra | 蓄 + 気 | accumuler le chakra |
+| Sceau d'ancrage | 固 + 定 | 固定 (kotei) — fixation |

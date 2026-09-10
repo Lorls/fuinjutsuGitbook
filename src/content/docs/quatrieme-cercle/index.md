@@ -21,6 +21,7 @@ Ces sceaux ont des conséquences pouvant aller **jusqu'à la mort** de la cible.
 - [Sceau d'effacement de mémoire](/quatrieme-cercle/effacement-memoire/)
 - [Sceau de corruption vitale](/quatrieme-cercle/corruption-vitale/)
 - [Sceau maudit des représailles](/quatrieme-cercle/represailles/)
+- [Sceau des murmures](/quatrieme-cercle/murmures/)
 
 ## Kanjis
 
@@ -33,3 +34,4 @@ Ces sceaux ont des conséquences pouvant aller **jusqu'à la mort** de la cible.
 | Effacement de mémoire | 記 憶 封 印 | 記憶封印 — scellement de la mémoire |
 | Corruption vitale | 呪 蝕 生 印 | malédiction + éroder + vie |
 | Représailles | 裏 四 象 封 印 | 裏四象封印 — scellement inversé des 4 symboles |
+| Sceau des murmures | 念 幻 気 印 | volonté + fantôme + chakra + sceau |
