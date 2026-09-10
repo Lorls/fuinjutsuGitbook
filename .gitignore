@@ -12,3 +12,6 @@ npm-debug.log*
 .env.production
 # macOS
 .DS_Store
+
+# base SQLite locale
+data/

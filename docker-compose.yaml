@@ -1,42 +1,16 @@
 services:
-  fuinjutsu:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  app:
+    build: .
+    ports:
+      - "4321:4321"
     environment:
-      - HOST=0.0.0.0
-      - PORT=4321
-      - DB_HOST=mysql
-      - DB_PORT=3306
-      - DB_USER=fuinjutsu
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_NAME=fuinjutsu
-      - SESSION_SECRET=${SESSION_SECRET}
-      - ADMIN_USER=${ADMIN_USER}
-      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
-    expose:
-      - "4321"
-    depends_on:
-      mysql:
-        condition: service_healthy
-    restart: unless-stopped
-
-  mysql:
-    image: mysql:8.0
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-    environment:
-      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
-      - MYSQL_DATABASE=fuinjutsu
-      - MYSQL_USER=fuinjutsu
-      - MYSQL_PASSWORD=${DB_PASSWORD}
+      DATABASE_URL: "file:/data/fuinjutsu.db"
+      SESSION_SECRET: "${SESSION_SECRET:-dev-secret-change-me}"
+      ADMIN_USER: "${ADMIN_USER:-admin}"
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD:-change-me}"
     volumes:
-      - mysql_data:/var/lib/mysql
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_ROOT_PASSWORD}"]
-      interval: 10s
-      timeout: 5s
-      retries: 12
+      - fuinjutsu-data:/data
     restart: unless-stopped
 
 volumes:
-  mysql_data:
+  fuinjutsu-data:

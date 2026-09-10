@@ -15,9 +15,9 @@
     "@astrojs/starlight": "^0.37.0",
     "astro": "^5.5.0",
     "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.8.0",
     "marked": "^18.0.9",
     "motion": "^13.0.0",
-    "mysql2": "^3.11.0",
     "sharp": "^0.34.0"
   }
 }

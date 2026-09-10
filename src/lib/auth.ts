@@ -1,7 +1,6 @@
 import crypto from 'node:crypto';
 import bcrypt from 'bcryptjs';
-import type { RowDataPacket } from 'mysql2';
-import { getPool, ensureSetup } from './db';
+import { db } from './db';
 
 export type User = { id: number; username: string; rank: number; is_staff: boolean };
 
@@ -9,11 +8,11 @@ const SECRET = process.env.SESSION_SECRET ?? 'dev-insecure-secret-change-me';
 export const SESSION_COOKIE = 'fuin_session';
 export const SESSION_MAX_AGE = 60 * 60 * 24 * 30; // 30 jours
 
-export function hashPassword(pw: string): Promise<string> {
-  return bcrypt.hash(pw, 10);
+export function hashPassword(pw: string): string {
+  return bcrypt.hashSync(pw, 10);
 }
-export function verifyPassword(pw: string, hash: string): Promise<boolean> {
-  return bcrypt.compare(pw, hash);
+export function verifyPassword(pw: string, hash: string): boolean {
+  return bcrypt.compareSync(pw, hash);
 }
 
 function sign(payload: string): string {
@@ -37,25 +36,25 @@ export function readSession(token?: string): number | null {
   return Number.isInteger(id) ? id : null;
 }
 
-export async function getUserById(id: number): Promise<User | null> {
-  await ensureSetup();
-  const [rows] = await getPool().query<RowDataPacket[]>(
-    'SELECT id, username, rank_level, is_staff FROM users WHERE id = ?',
-    [id],
-  );
-  const r = rows[0];
+type UserRow = {
+  id: number;
+  username: string;
+  password_hash: string;
+  rank_level: number;
+  is_staff: number;
+};
+
+export function getUserById(id: number): User | null {
+  const r = db
+    .prepare('SELECT id, username, rank_level, is_staff FROM users WHERE id = ?')
+    .get(id) as UserRow | undefined;
   return r ? { id: r.id, username: r.username, rank: r.rank_level, is_staff: !!r.is_staff } : null;
 }
 
-export async function getUserByName(username: string): Promise<
-  (User & { password_hash: string }) | null
-> {
-  await ensureSetup();
-  const [rows] = await getPool().query<RowDataPacket[]>(
-    'SELECT id, username, password_hash, rank_level, is_staff FROM users WHERE username = ?',
-    [username],
-  );
-  const r = rows[0];
+export function getUserByName(username: string): (User & { password_hash: string }) | null {
+  const r = db
+    .prepare('SELECT id, username, password_hash, rank_level, is_staff FROM users WHERE username = ?')
+    .get(username) as UserRow | undefined;
   return r
     ? {
         id: r.id,

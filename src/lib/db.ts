@@ -1,55 +1,38 @@
-import mysql from 'mysql2/promise';
+import fs from 'node:fs';
+import path from 'node:path';
+import Database from 'better-sqlite3';
 import bcrypt from 'bcryptjs';
 
-let pool: mysql.Pool | null = null;
-
-export function getPool(): mysql.Pool {
-  if (!pool) {
-    pool = mysql.createPool({
-      host: process.env.DB_HOST ?? 'localhost',
-      port: Number(process.env.DB_PORT ?? 3306),
-      user: process.env.DB_USER ?? 'root',
-      password: process.env.DB_PASSWORD ?? '',
-      database: process.env.DB_NAME ?? 'fuinjutsu',
-      waitForConnections: true,
-      connectionLimit: 5,
-      charset: 'utf8mb4',
-    });
-  }
-  return pool;
+function resolveDbPath(): string {
+  const url = process.env.DATABASE_URL ?? 'file:./data/fuinjutsu.db';
+  return url.startsWith('file:') ? url.slice('file:'.length) : url;
 }
 
-let ready: Promise<void> | null = null;
+const dbPath = resolveDbPath();
+fs.mkdirSync(path.dirname(dbPath) || '.', { recursive: true });
 
-// Crée la table et le compte staff initial (une seule fois par process).
-export function ensureSetup(): Promise<void> {
-  if (!ready) ready = setup();
-  return ready;
-}
+export const db = new Database(dbPath);
+db.pragma('journal_mode = WAL');
 
-async function setup(): Promise<void> {
-  const db = getPool();
-  await db.query(`
-    CREATE TABLE IF NOT EXISTS users (
-      id INT AUTO_INCREMENT PRIMARY KEY,
-      username VARCHAR(64) NOT NULL UNIQUE,
-      password_hash VARCHAR(255) NOT NULL,
-      rank_level INT NOT NULL DEFAULT 1,
-      is_staff TINYINT(1) NOT NULL DEFAULT 0,
-      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    ) CHARACTER SET utf8mb4
-  `);
+db.exec(`
+  CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    rank_level INTEGER NOT NULL DEFAULT 1,
+    is_staff INTEGER NOT NULL DEFAULT 0,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  )
+`);
 
-  const adminUser = process.env.ADMIN_USER;
-  const adminPass = process.env.ADMIN_PASSWORD;
-  if (adminUser && adminPass) {
-    const [rows] = await db.query('SELECT id FROM users WHERE username = ?', [adminUser]);
-    if ((rows as unknown[]).length === 0) {
-      const hash = await bcrypt.hash(adminPass, 10);
-      await db.query(
-        'INSERT INTO users (username, password_hash, rank_level, is_staff) VALUES (?, ?, 5, 1)',
-        [adminUser, hash],
-      );
-    }
+// Compte staff initial (créé une seule fois s'il n'existe pas).
+const adminUser = process.env.ADMIN_USER;
+const adminPass = process.env.ADMIN_PASSWORD;
+if (adminUser && adminPass) {
+  const exists = db.prepare('SELECT id FROM users WHERE username = ?').get(adminUser);
+  if (!exists) {
+    db.prepare(
+      'INSERT INTO users (username, password_hash, rank_level, is_staff) VALUES (?, ?, 5, 1)',
+    ).run(adminUser, bcrypt.hashSync(adminPass, 10));
   }
 }

@@ -1,16 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getPool, ensureSetup } from '../lib/db';
-import type { RowDataPacket } from 'mysql2';
+import { db } from '../lib/db';
 
 const user = Astro.locals.user;
 if (!user) return Astro.redirect('/login?next=/admin');
 if (!user.is_staff) return new Response('Accès réservé au staff.', { status: 403 });
 
-await ensureSetup();
-const [rows] = await getPool().query<RowDataPacket[]>(
-  'SELECT id, username, rank_level, is_staff, created_at FROM users ORDER BY is_staff DESC, username',
-);
+const rows = db
+  .prepare('SELECT id, username, rank_level, is_staff, created_at FROM users ORDER BY is_staff DESC, username')
+  .all() as Array<{ id: number; username: string; rank_level: number; is_staff: number; created_at: string }>;
 const msg = Astro.url.searchParams.get('msg');
 const ranks = [1, 2, 3, 4, 5];
 ---
