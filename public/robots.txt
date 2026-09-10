@@ -1,6 +1,12 @@
 User-agent: *
-Allow: /
-
-# Contenu lisible par un LLM
-# Index : /llms.txt
-# Texte intégral : /llms-full.txt
+Allow: /$
+Disallow: /premier-cercle/
+Disallow: /deuxieme-cercle/
+Disallow: /troisieme-cercle/
+Disallow: /quatrieme-cercle/
+Disallow: /cinquieme-cercle/
+Disallow: /sceaux-de-clan/
+Disallow: /a-valider/
+Disallow: /admin
+Disallow: /llms.txt
+Disallow: /llms-full.txt

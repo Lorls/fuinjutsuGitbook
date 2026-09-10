@@ -1,0 +1,42 @@
+---
+import '../styles/custom.css';
+
+if (Astro.locals.user) {
+  const to = Astro.url.searchParams.get('next') ?? '/';
+  return Astro.redirect(to.startsWith('/') ? to : '/');
+}
+const error = Astro.url.searchParams.get('error');
+const next = Astro.url.searchParams.get('next') ?? '/';
+---
+
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" />
+    <title>Connexion · Fuinjutsu — Zenkai</title>
+  </head>
+  <body>
+    <div class="grain"></div>
+    <main class="auth-shell">
+      <form class="auth-card" method="post" action="/api/login">
+        <div class="auth-sigil">封</div>
+        <p class="eyebrow">Conclave de Zenkai</p>
+        <h1>Accès au grimoire</h1>
+        <p class="auth-lede">Identifie-toi pour consulter les archives correspondant à ton rang.</p>
+        {error && <p class="auth-error">Identifiants incorrects.</p>}
+        <input type="hidden" name="next" value={next} />
+        <label>Nom
+          <input name="username" required autocomplete="username" autofocus />
+        </label>
+        <label>Mot de passe
+          <input name="password" type="password" required autocomplete="current-password" />
+        </label>
+        <button type="submit" class="button button--ink">Entrer <span>→</span></button>
+        <a class="auth-back" href="/">← Retour à l'accueil</a>
+      </form>
+    </main>
+  </body>
+</html>

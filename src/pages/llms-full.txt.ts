@@ -24,7 +24,8 @@ const cleanBody = (body: string): string =>
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 
-export const GET: APIRoute = async ({ site }) => {
+export const GET: APIRoute = async ({ site, locals }) => {
+  if (!locals.user?.is_staff) return new Response('Réservé au staff.', { status: 403 });
   const docs = await getCollection('docs');
   docs.sort((a, b) => priority(a.id) - priority(b.id) || a.id.localeCompare(b.id));
 

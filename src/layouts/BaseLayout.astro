@@ -1,10 +1,13 @@
 ---
-import { documents, groups, docsFor } from '../lib/content';
+import { docsFor } from '../lib/content';
+import { visibleDocuments, visibleGroups } from '../lib/access';
 import '../styles/custom.css';
 
 interface Props { title: string; description?: string; activeSlug?: string; }
 const { title, description = "Archives du Fuinjutsu de Zenkai", activeSlug = '' } = Astro.props;
-const searchData = documents.map(({ title, slug, circle, excerpt }) => ({ title, slug, circle, excerpt }));
+const user = Astro.locals.user;
+const navGroups = visibleGroups(user);
+const searchData = visibleDocuments(user).map(({ title, slug, circle, excerpt }) => ({ title, slug, circle, excerpt }));
 ---
 
 <!doctype html>
@@ -23,13 +26,22 @@ const searchData = documents.map(({ title, slug, circle, excerpt }) => ({ title,
       <nav class="top-actions" aria-label="Actions">
         <button class="search-trigger" type="button" data-search-open><kbd>⌘</kbd> Rechercher</button>
         <button class="icon-button" type="button" aria-label="Changer le thème" data-theme-toggle>☾</button>
+        {user ? (
+          <span class="account">
+            <span class="account-name">{user.username}<em>{user.is_staff ? 'Staff' : `Cercle ${user.rank}`}</em></span>
+            {user.is_staff && <a class="account-link" href="/admin">Admin</a>}
+            <form method="post" action="/api/logout"><button class="account-link" type="submit">Sortir</button></form>
+          </span>
+        ) : (
+          <a class="account-link" href="/login">Connexion</a>
+        )}
         <button class="menu-toggle" type="button" aria-label="Ouvrir le sommaire" data-menu-toggle><i></i><i></i></button>
       </nav>
     </header>
     <div class="shell">
       <aside class="codex-nav" data-navigation>
         <p class="nav-overline">Sommaire du grimoire</p>
-        {groups.map((group) => {
+        {navGroups.map((group) => {
           const entries = docsFor(group.key);
           return entries.length ? <section class="nav-group">
             <p><span>{group.glyph}</span>{group.label}</p>

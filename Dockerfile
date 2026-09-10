@@ -1,20 +1,25 @@
-# --- Étape 1 : build du site Astro Starlight ---
+# --- Étape 1 : build de l'app Astro (SSR) ---
 FROM node:20-slim AS build
 
 WORKDIR /app
 
-# Installer les dépendances (cache Docker sur package.json)
 COPY package.json ./
 RUN npm install
 
-# Copier le projet et générer le site statique dans /app/dist
 COPY . .
 RUN npm run build
 
-# --- Étape 2 : servir le statique avec nginx ---
-FROM nginx:alpine
+# --- Étape 2 : serveur Node ---
+FROM node:20-slim
 
-COPY --from=build /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
+ENV PORT=4321
 
-EXPOSE 80
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./package.json
+
+EXPOSE 4321
+CMD ["node", "./dist/server/entry.mjs"]
