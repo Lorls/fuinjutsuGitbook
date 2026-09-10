@@ -11,6 +11,8 @@ const rows = db
   .prepare('SELECT id, username, rank_level, is_staff, created_at FROM users ORDER BY is_staff DESC, username')
   .all() as Array<{ id: number; username: string; rank_level: number; is_staff: number; created_at: string }>;
 const msg = Astro.url.searchParams.get('msg');
+const pw = Astro.url.searchParams.get('pw');
+const credUser = Astro.url.searchParams.get('user');
 const ranks = [1, 2, 3, 4, 5];
 ---
 
@@ -19,20 +21,30 @@ const ranks = [1, 2, 3, 4, 5];
     <header class="admin-head">
       <p class="archive-index">Console staff</p>
       <h1>Comptes</h1>
-      <p class="admin-lede">Crée les comptes des joueurs et fixe leur rang. Le rang détermine les archives visibles.</p>
+      <p class="admin-lede">Crée les comptes des joueurs et fixe leur rang. Le mot de passe est généré automatiquement.</p>
     </header>
 
-    {msg && <p class="admin-msg" data-flash>{msg}</p>}
+    {pw && (
+      <div class="admin-creds">
+        <div class="admin-creds-body">
+          <p class="admin-creds-title">Identifiants générés — à transmettre au joueur</p>
+          <p class="admin-creds-line"><span>Utilisateur</span><code>{credUser}</code><span>Mot de passe</span><code data-pw>{pw}</code></p>
+          <p class="admin-creds-note">⚠️ Affiché une seule fois — note-le maintenant.</p>
+        </div>
+        <button type="button" class="button button--ink" data-copy-pw>Copier</button>
+      </div>
+    )}
+
+    {msg && !pw && <p class="admin-msg">{msg}</p>}
 
     <section class="admin-block">
       <h2>Nouveau compte</h2>
       <form class="admin-form admin-form--create" method="post" action="/api/admin/users">
         <input type="hidden" name="action" value="create" />
         <label>Nom<input name="username" required autocomplete="off" /></label>
-        <label>Mot de passe<input name="password" type="text" required minlength="4" autocomplete="off" /></label>
         <label>Rang<select name="rank">{ranks.map((r) => <option value={r}>Cercle {r}</option>)}</select></label>
         <label class="admin-check"><input type="checkbox" name="is_staff" value="1" /> Staff</label>
-        <button type="submit" class="button button--ink">Créer</button>
+        <button type="submit" class="button button--ink">Créer le compte</button>
       </form>
     </section>
 
@@ -56,11 +68,10 @@ const ranks = [1, 2, 3, 4, 5];
                 <label class="admin-check"><input type="checkbox" name="is_staff" value="1" checked={!!u.is_staff} /> Staff</label>
                 <button type="submit">Enregistrer</button>
               </form>
-              <form class="admin-inline" method="post" action="/api/admin/users">
+              <form class="admin-inline" method="post" action="/api/admin/users" onsubmit="return confirm('Générer un nouveau mot de passe pour ce compte ?')">
                 <input type="hidden" name="action" value="password" />
                 <input type="hidden" name="id" value={u.id} />
-                <input name="password" type="text" placeholder="Nouveau mdp" minlength="4" autocomplete="off" />
-                <button type="submit">Réinit.</button>
+                <button type="submit">Nouveau mdp</button>
               </form>
               {u.id !== user.id && (
                 <form class="admin-inline" method="post" action="/api/admin/users" onsubmit="return confirm('Supprimer ce compte ?')">
@@ -78,8 +89,18 @@ const ranks = [1, 2, 3, 4, 5];
 </AdminLayout>
 
 <script>
-  // Retire le message flash de l'URL après affichage.
-  if (location.search.includes('msg=')) {
-    setTimeout(() => history.replaceState(null, '', location.pathname), 10);
+  document.querySelector('[data-copy-pw]')?.addEventListener('click', (e) => {
+    const pw = document.querySelector('[data-pw]')?.textContent ?? '';
+    if (pw && navigator.clipboard) {
+      navigator.clipboard.writeText(pw);
+      const btn = e.currentTarget as HTMLButtonElement;
+      const label = btn.textContent;
+      btn.textContent = 'Copié ✓';
+      setTimeout(() => { btn.textContent = label; }, 1500);
+    }
+  });
+  // Nettoie l'URL (retire msg/pw) après affichage.
+  if (/[?&](msg|pw)=/.test(location.search)) {
+    history.replaceState(null, '', location.pathname);
   }
 </script>

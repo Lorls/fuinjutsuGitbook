@@ -57,6 +57,7 @@ main { min-width:0; }.landing-hero { position:relative; display:grid; grid-templ
 .account-menu a, .account-menu button { display:block; width:100%; padding:.55rem .7rem; border:0; background:transparent; color:var(--paper); font-family:var(--sans); font-size:.82rem; text-align:left; cursor:pointer; transition:background .15s,color .15s; }
 .account-menu a:hover, .account-menu button:hover { background:color-mix(in srgb,var(--red) 12%,transparent); color:var(--red-soft); }
 .account-menu form { margin:0; }
+.account-menu[hidden] { display:none; }
 @media (max-width:640px) { .account-meta, .account-caret { display:none; } }
 
 .auth-shell { display:grid; place-items:center; min-height:100vh; padding:2rem 1rem; }
@@ -114,6 +115,11 @@ main { min-width:0; }.landing-hero { position:relative; display:grid; grid-templ
 .admin-card i { position:absolute; top:1.2rem; right:1.3rem; color:var(--red); font-style:normal; }
 
 .admin-msg { margin:0 0 2rem; padding:.7rem 1rem; border-left:2px solid var(--gold); background:color-mix(in srgb,var(--gold) 10%,transparent); color:var(--bone); font-size:.85rem; }
+.admin-creds { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; margin:0 0 2.5rem; padding:1.1rem 1.3rem; border:1px solid color-mix(in srgb,var(--gold) 55%,var(--line)); background:color-mix(in srgb,var(--gold) 9%,transparent); }
+.admin-creds-title { margin:0 0 .4rem; color:var(--gold); font-family:var(--mono); font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; }
+.admin-creds-line { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; margin:0; color:var(--mist); font-family:var(--mono); font-size:.62rem; letter-spacing:.06em; text-transform:uppercase; }
+.admin-creds-line code { padding:.25rem .55rem; border:1px solid var(--line); background:var(--void); color:var(--paper); font-size:.95rem; letter-spacing:0; text-transform:none; }
+.admin-creds-note { margin:.55rem 0 0; color:var(--red-soft); font-size:.78rem; }
 .admin-block { margin:0 0 3rem; }
 .admin-block h2 { margin:0 0 1.1rem; font-family:var(--serif); font-size:1.5rem; font-weight:600; }
 .admin-form--create { display:flex; flex-wrap:wrap; align-items:flex-end; gap:.8rem; padding:1.3rem; border:1px solid var(--line); background:color-mix(in srgb,var(--surface) 35%,transparent); }
