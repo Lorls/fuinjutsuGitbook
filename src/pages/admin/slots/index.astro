@@ -1,5 +1,6 @@
 ---
 import AdminLayout from '../../../layouts/AdminLayout.astro';
+import SlotTabs from '../../../components/SlotTabs.astro';
 import { requireStaff } from '../../../lib/guard';
 import { overview, totals, allUsers } from '../../../lib/slots';
 
@@ -20,6 +21,8 @@ const msg = Astro.url.searchParams.get('msg');
       <p class="admin-lede">Suivi des sceaux slottés : qui occupe quelle place, par village.</p>
     </header>
 
+    <SlotTabs active="suivi" />
+
     {msg && <p class="admin-msg">{msg}</p>}
 
     <div class="admin-stats">
@@ -27,8 +30,6 @@ const msg = Astro.url.searchParams.get('msg');
       <div class="stat"><b>{t.occ}/{t.cap}</b><span>Places occupées</span></div>
       <div class="stat"><b>{t.full}</b><span>Villages complets</span></div>
     </div>
-
-    <p class="slot-config-link"><a href="/admin/slots/config">⚙ Configurer les sceaux & villages →</a></p>
 
     {seals.length === 0 ? (
       <div class="locked-note">Aucun sceau slotté pour l'instant. Ajoute-en depuis la <a href="/admin/slots/config">configuration</a>.</div>

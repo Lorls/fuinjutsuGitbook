@@ -170,3 +170,52 @@ export function allUsers(): { id: number; username: string; is_staff: number }[]
     is_staff: number;
   }[];
 }
+
+/* ---------- Catalogue complet avec statut (pour la vue d'ensemble) ---------- */
+export type SealStatus = {
+  slug: string;
+  title: string;
+  circle: string;
+  slotted: boolean;
+  totalCap: number;
+  totalOcc: number;
+  villages: VillageSlot[];
+  occupants: { username: string; villageName: string; note: string | null }[];
+};
+
+export function catalogueWithStatus(): { circle: string; label: string; seals: SealStatus[] }[] {
+  const ov = new Map(overview().map((s) => [s.slug, s]));
+  const byCircle = new Map<string, SealStatus[]>();
+
+  for (const c of catalogue()) {
+    const slotted = ov.get(c.slug);
+    let totalCap = 0;
+    let totalOcc = 0;
+    const occupants: { username: string; villageName: string; note: string | null }[] = [];
+    if (slotted) {
+      for (const v of slotted.villages) {
+        totalCap += v.cap;
+        totalOcc += v.occupants.length;
+        for (const o of v.occupants) occupants.push({ username: o.username, villageName: v.villageName, note: o.note });
+      }
+    }
+    const item: SealStatus = {
+      slug: c.slug,
+      title: c.title,
+      circle: c.circle,
+      slotted: !!slotted,
+      totalCap,
+      totalOcc,
+      villages: slotted?.villages ?? [],
+      occupants,
+    };
+    if (!byCircle.has(c.circle)) byCircle.set(c.circle, []);
+    byCircle.get(c.circle)!.push(item);
+  }
+
+  return CIRCLE_ORDER.filter((c) => byCircle.has(c)).map((c) => ({
+    circle: c,
+    label: circleLabel(c),
+    seals: byCircle.get(c)!,
+  }));
+}

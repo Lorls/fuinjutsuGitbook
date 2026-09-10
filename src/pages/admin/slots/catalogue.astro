@@ -1,0 +1,86 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import SlotTabs from '../../../components/SlotTabs.astro';
+import { requireStaff } from '../../../lib/guard';
+import { catalogueWithStatus } from '../../../lib/slots';
+
+const denied = requireStaff(Astro);
+if (denied) return denied;
+
+const groups = catalogueWithStatus();
+const allSeals = groups.flatMap((g) => g.seals);
+const slottedCount = allSeals.filter((s) => s.slotted).length;
+const msg = Astro.url.searchParams.get('msg');
+---
+
+<AdminLayout title="Catalogue des slots" active="slots">
+  <div class="admin-page">
+    <header class="admin-head">
+      <p class="archive-index">Console staff · Slots</p>
+      <h1>Catalogue</h1>
+      <p class="admin-lede">Tous les sceaux, par cercle, avec leur statut de slot et leurs occupants.</p>
+    </header>
+
+    <SlotTabs active="catalogue" />
+
+    {msg && <p class="admin-msg">{msg}</p>}
+
+    <div class="admin-stats">
+      <div class="stat"><b>{allSeals.length}</b><span>Sceaux</span></div>
+      <div class="stat"><b>{slottedCount}</b><span>Slottés</span></div>
+      <div class="stat"><b>{allSeals.length - slottedCount}</b><span>Libres</span></div>
+    </div>
+
+    {groups.map((group) => (
+      <section class="admin-block">
+        <h2>{group.label}</h2>
+        <div class="cat-list">
+          {group.seals.map((s) => (
+            <div class:list={['cat-row', s.slotted && 'is-slotted']}>
+              <div class="cat-main">
+                <a class="cat-title" href={s.slug}>{s.title}</a>
+                {s.slotted ? (
+                  <span class:list={['cat-badge', 'cat-badge--slot', s.totalCap > 0 && s.totalOcc >= s.totalCap && 'is-full']}>
+                    {s.totalOcc}/{s.totalCap} places
+                  </span>
+                ) : (
+                  <span class="cat-badge">Non slotté</span>
+                )}
+              </div>
+
+              {s.slotted ? (
+                <div class="cat-detail">
+                  <div class="cat-villages">
+                    {s.villages.filter((v) => v.cap > 0).map((v) => (
+                      <span class:list={['cat-vil', v.occupants.length >= v.cap && 'is-full']}>
+                        {v.villageName} <b>{v.occupants.length}/{v.cap}</b>
+                      </span>
+                    ))}
+                    {s.totalCap === 0 && <span class="cat-vil cat-vil--muted">aucune place définie</span>}
+                  </div>
+                  {s.occupants.length > 0 && (
+                    <div class="cat-occ">
+                      {s.occupants.map((o) => (
+                        <span class="cat-chip">{o.username}<em> · {o.villageName}{o.note ? ` · ${o.note}` : ''}</em></span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <form class="cat-flag" method="post" action="/api/admin/slots">
+                  <input type="hidden" name="action" value="flag" />
+                  <input type="hidden" name="seal_slug" value={s.slug} />
+                  <button type="submit">Flaguer</button>
+                </form>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</AdminLayout>
+
+<script>
+  if (location.search.includes('msg=')) setTimeout(() => history.replaceState(null, '', location.pathname), 10);
+</script>

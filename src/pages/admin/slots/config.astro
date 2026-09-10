@@ -1,5 +1,6 @@
 ---
 import AdminLayout from '../../../layouts/AdminLayout.astro';
+import SlotTabs from '../../../components/SlotTabs.astro';
 import { requireStaff } from '../../../lib/guard';
 import { listVillages, catalogue, slottedSlugs, overview } from '../../../lib/slots';
 
@@ -21,8 +22,9 @@ const capOf = (seal: (typeof slotted)[number], villageId: number) =>
       <p class="archive-index">Console staff · Slots</p>
       <h1>Configuration</h1>
       <p class="admin-lede">Gère les villages, flague les sceaux slottés et fixe le nombre de places par village.</p>
-      <p class="slot-config-link"><a href="/admin/slots">← Retour au suivi</a></p>
     </header>
+
+    <SlotTabs active="config" />
 
     {msg && <p class="admin-msg">{msg}</p>}
 

@@ -1,0 +1,14 @@
+---
+interface Props { active: 'suivi' | 'catalogue' | 'config'; }
+const { active } = Astro.props;
+const tabs = [
+  { key: 'suivi', href: '/admin/slots', label: 'Suivi' },
+  { key: 'catalogue', href: '/admin/slots/catalogue', label: 'Catalogue' },
+  { key: 'config', href: '/admin/slots/config', label: 'Configuration' },
+];
+---
+<nav class="slot-tabs">
+  {tabs.map((t) => (
+    <a class:list={['slot-tab', active === t.key && 'is-active']} href={t.href}>{t.label}</a>
+  ))}
+</nav>
