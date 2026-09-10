@@ -5,4 +5,5 @@ export type AdminNavItem = { key: string; href: string; glyph: string; label: st
 export const adminNav: AdminNavItem[] = [
   { key: 'dashboard', href: '/admin', glyph: '⌂', label: 'Tableau de bord', hint: "Vue d'ensemble" },
   { key: 'comptes', href: '/admin/comptes', glyph: '人', label: 'Comptes', hint: 'Joueurs & rangs' },
+  { key: 'slots', href: '/admin/slots', glyph: '枠', label: 'Slots', hint: 'Sceaux slottés' },
 ];

@@ -1,0 +1,114 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { requireStaff } from '../../../lib/guard';
+import { listVillages, catalogue, slottedSlugs, overview } from '../../../lib/slots';
+
+const denied = requireStaff(Astro);
+if (denied) return denied;
+
+const villages = listVillages();
+const slotted = overview();
+const slug = slottedSlugs();
+const addable = catalogue().filter((c) => !slug.has(c.slug));
+const msg = Astro.url.searchParams.get('msg');
+const capOf = (seal: (typeof slotted)[number], villageId: number) =>
+  seal.villages.find((v) => v.villageId === villageId)?.cap ?? 0;
+---
+
+<AdminLayout title="Configuration des slots" active="slots">
+  <div class="admin-page">
+    <header class="admin-head">
+      <p class="archive-index">Console staff · Slots</p>
+      <h1>Configuration</h1>
+      <p class="admin-lede">Gère les villages, flague les sceaux slottés et fixe le nombre de places par village.</p>
+      <p class="slot-config-link"><a href="/admin/slots">← Retour au suivi</a></p>
+    </header>
+
+    {msg && <p class="admin-msg">{msg}</p>}
+
+    <section class="admin-block">
+      <h2>Villages · {villages.length}</h2>
+      <div class="village-list">
+        {villages.map((v) => (
+          <div class="village-chip">
+            <span>{v.name}</span>
+            <form method="post" action="/api/admin/slots" onsubmit="return confirm('Supprimer ce village ? (caps et assignations liées seront effacés)')">
+              <input type="hidden" name="action" value="village_remove" />
+              <input type="hidden" name="id" value={v.id} />
+              <button type="submit" aria-label="Supprimer">✕</button>
+            </form>
+          </div>
+        ))}
+      </div>
+      <form class="admin-inline" method="post" action="/api/admin/slots" style="margin-top:1rem">
+        <input type="hidden" name="action" value="village_add" />
+        <input name="name" placeholder="Nouveau village" required />
+        <button type="submit">Ajouter</button>
+      </form>
+    </section>
+
+    <section class="admin-block">
+      <h2>Ajouter un sceau au système</h2>
+      <form class="admin-inline" method="post" action="/api/admin/slots">
+        <input type="hidden" name="action" value="flag" />
+        <select name="seal_slug" required>
+          <option value="" disabled selected>Choisir un sceau…</option>
+          {addable.map((c) => <option value={c.slug}>{c.title}</option>)}
+        </select>
+        <button type="submit" class="button button--ink">Flaguer comme slotté</button>
+      </form>
+    </section>
+
+    <section class="admin-block">
+      <h2>Sceaux slottés · {slotted.length}</h2>
+      {slotted.length === 0 && <p class="slot-empty">Aucun sceau slotté.</p>}
+      <div class="slot-config-list">
+        {slotted.map((seal) => (
+          <div class="slot-config-item">
+            <div class="slot-config-top">
+              <div>
+                <span class="slot-seal-circle">{seal.circleLabel}</span>
+                <strong>{seal.title}</strong>
+              </div>
+              <form method="post" action="/api/admin/slots" onsubmit="return confirm('Retirer ce sceau du système ? (assignations effacées)')">
+                <input type="hidden" name="action" value="unflag" />
+                <input type="hidden" name="seal_slug" value={seal.slug} />
+                <button type="submit" class="admin-danger">Retirer</button>
+              </form>
+            </div>
+
+            <form class="slot-caps" method="post" action="/api/admin/slots">
+              <input type="hidden" name="action" value="caps" />
+              <input type="hidden" name="seal_slug" value={seal.slug} />
+              <div class="slot-caps-grid">
+                {villages.map((v) => (
+                  <label>{v.name}<input type="number" min="0" name={`cap_${v.id}`} value={capOf(seal, v.id)} /></label>
+                ))}
+              </div>
+              <button type="submit">Enregistrer les places</button>
+            </form>
+
+            <div class="slot-config-extra">
+              <form class="admin-inline" method="post" action="/api/admin/slots">
+                <input type="hidden" name="action" value="capall" />
+                <input type="hidden" name="seal_slug" value={seal.slug} />
+                <input type="number" min="0" name="value" placeholder="n" style="width:70px" />
+                <button type="submit">Appliquer à tous</button>
+              </form>
+              <form class="slot-notes" method="post" action="/api/admin/slots">
+                <input type="hidden" name="action" value="notes" />
+                <input type="hidden" name="seal_slug" value={seal.slug} />
+                <input name="notes" placeholder="note interne (opt.)" value={seal.notes ?? ''} />
+                <button type="submit">Note</button>
+              </form>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</AdminLayout>
+
+<script>
+  if (location.search.includes('msg=')) setTimeout(() => history.replaceState(null, '', location.pathname), 10);
+</script>

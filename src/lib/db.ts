@@ -36,3 +36,40 @@ if (adminUser && adminPass) {
     ).run(adminUser, bcrypt.hashSync(adminPass, 10));
   }
 }
+
+// ---- Système de slots de sceaux ----
+db.exec(`
+  CREATE TABLE IF NOT EXISTS village (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE,
+    sort_order INTEGER NOT NULL DEFAULT 0
+  );
+  CREATE TABLE IF NOT EXISTS seal_config (
+    seal_slug TEXT PRIMARY KEY,
+    title TEXT NOT NULL,
+    notes TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+  CREATE TABLE IF NOT EXISTS seal_village_cap (
+    seal_slug TEXT NOT NULL,
+    village_id INTEGER NOT NULL,
+    max_slots INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (seal_slug, village_id)
+  );
+  CREATE TABLE IF NOT EXISTS seal_assignment (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    seal_slug TEXT NOT NULL,
+    village_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    note TEXT,
+    assigned_by INTEGER,
+    assigned_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+  CREATE INDEX IF NOT EXISTS idx_assign_seal ON seal_assignment(seal_slug, village_id);
+`);
+
+// Villages initiaux (créés une seule fois ; gérables ensuite depuis l'admin)
+if ((db.prepare('SELECT COUNT(*) AS c FROM village').get() as { c: number }).c === 0) {
+  const insV = db.prepare('INSERT INTO village (name, sort_order) VALUES (?, ?)');
+  ['Ame', 'Konoha', 'Suna'].forEach((n, i) => insV.run(n, i));
+}

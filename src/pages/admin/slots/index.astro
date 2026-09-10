@@ -1,0 +1,100 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { requireStaff } from '../../../lib/guard';
+import { overview, totals, allUsers } from '../../../lib/slots';
+
+const denied = requireStaff(Astro);
+if (denied) return denied;
+
+const seals = overview();
+const users = allUsers();
+const t = totals();
+const msg = Astro.url.searchParams.get('msg');
+---
+
+<AdminLayout title="Slots" active="slots">
+  <div class="admin-page">
+    <header class="admin-head">
+      <p class="archive-index">Console staff</p>
+      <h1>Slots de sceaux</h1>
+      <p class="admin-lede">Suivi des sceaux slottés : qui occupe quelle place, par village.</p>
+    </header>
+
+    {msg && <p class="admin-msg">{msg}</p>}
+
+    <div class="admin-stats">
+      <div class="stat"><b>{seals.length}</b><span>Sceaux slottés</span></div>
+      <div class="stat"><b>{t.occ}/{t.cap}</b><span>Places occupées</span></div>
+      <div class="stat"><b>{t.full}</b><span>Villages complets</span></div>
+    </div>
+
+    <p class="slot-config-link"><a href="/admin/slots/config">⚙ Configurer les sceaux & villages →</a></p>
+
+    {seals.length === 0 ? (
+      <div class="locked-note">Aucun sceau slotté pour l'instant. Ajoute-en depuis la <a href="/admin/slots/config">configuration</a>.</div>
+    ) : (
+      <div class="slot-list">
+        {seals.map((seal) => {
+          const active = seal.villages.filter((v) => v.cap > 0);
+          return (
+            <section class="slot-seal">
+              <header class="slot-seal-head">
+                <div>
+                  <span class="slot-seal-circle">{seal.circleLabel}</span>
+                  <h2><a href={seal.slug}>{seal.title}</a></h2>
+                </div>
+              </header>
+              {active.length === 0 ? (
+                <p class="slot-empty">Aucune place définie — règle les caps dans la <a href="/admin/slots/config">config</a>.</p>
+              ) : (
+                <div class="slot-villages">
+                  {active.map((v) => {
+                    const full = v.occupants.length >= v.cap;
+                    return (
+                      <div class:list={['slot-village', full && 'is-full']}>
+                        <div class="slot-village-head">
+                          <b>{v.villageName}</b>
+                          <span class="slot-gauge-value">{v.occupants.length}/{v.cap}</span>
+                        </div>
+                        <span class="slot-gauge"><i style={`width:${(v.occupants.length / v.cap) * 100}%`}></i></span>
+                        <ul class="slot-occupants">
+                          {v.occupants.map((o) => (
+                            <li>
+                              <span class="slot-chip">{o.username}{o.note && <em> · {o.note}</em>}</span>
+                              <form method="post" action="/api/admin/slots" class="slot-remove">
+                                <input type="hidden" name="action" value="unassign" />
+                                <input type="hidden" name="id" value={o.assignId} />
+                                <button type="submit" aria-label="Retirer">✕</button>
+                              </form>
+                            </li>
+                          ))}
+                        </ul>
+                        {!full && (
+                          <form method="post" action="/api/admin/slots" class="slot-assign">
+                            <input type="hidden" name="action" value="assign" />
+                            <input type="hidden" name="seal_slug" value={seal.slug} />
+                            <input type="hidden" name="village_id" value={v.villageId} />
+                            <select name="user_id" required>
+                              <option value="" disabled selected>Assigner…</option>
+                              {users.map((u) => <option value={u.id}>{u.username}{u.is_staff ? ' (staff)' : ''}</option>)}
+                            </select>
+                            <input name="note" placeholder="note (opt.)" />
+                            <button type="submit">+</button>
+                          </form>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </section>
+          );
+        })}
+      </div>
+    )}
+  </div>
+</AdminLayout>
+
+<script>
+  if (location.search.includes('msg=')) setTimeout(() => history.replaceState(null, '', location.pathname), 10);
+</script>
