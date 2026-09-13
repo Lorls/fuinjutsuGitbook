@@ -23,6 +23,7 @@ Le [Désenclavement de sceau](/troisieme-cercle/desenclavement/) est le premier 
 - [Sceau maudit du prisonnier](/troisieme-cercle/maudit-prisonnier/)
 - [Sceau de réserve vitale](/troisieme-cercle/reserve-vitale/)
 - [Sceau de localisation](/troisieme-cercle/localisation/)
+- [Sceau du cube aux faces écarlates](/troisieme-cercle/cube-ecarlate/)
 
 ## Kanjis obligatoires (4 à 6 kanjis)
 
@@ -37,9 +38,12 @@ Le [Désenclavement de sceau](/troisieme-cercle/desenclavement/) est le premier 
 | Maudit du prisonnier | 呪 印 縛 従 罰 | 呪印 (sceau maudit) + lier, soumettre, punir |
 | Réserve vitale | 生 命 蓄 気 | 生命 (vie) + accumuler l'énergie |
 | Localisation | 探 知 追 跡 | 探知 (détecter) + 追跡 (suivre) |
+| Cube aux faces écarlates | 緋 六 面 立 方 封 界 印 | écarlate + six faces + cube + sceller en enceinte (8 kanjis) |
 
 :::note
 **Drain de chakra :** ajouter des **spirales emprisonnées** aux 4 coins du sceau, mais à l'intérieur du cercle.
 
 **5 éléments :** l'ajout des kanjis des 5 éléments donne un sceau un peu différent des autres (6 kanjis).
+
+**Cube aux faces écarlates :** sceau **plus complexe** que la norme du cercle — **8 kanjis** — et **slotté à un seul poseur**.
 :::
