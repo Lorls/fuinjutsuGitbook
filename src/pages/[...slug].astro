@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { findDoc, docsFor } from '../lib/content';
 import { canView } from '../lib/access';
+import { sealStatus } from '../lib/slots';
 
 const user = Astro.locals.user;
 const slug = Astro.params.slug ?? '';
@@ -12,6 +13,10 @@ const allowed = canView(doc.circle, user);
 if (!allowed && !user) {
   return Astro.redirect('/login?next=' + encodeURIComponent(Astro.url.pathname));
 }
+
+// Panneau de statut de slot : uniquement sur les vraies pages de sceau
+const isSeal = allowed && !doc.isIndex && doc.circle !== 'general';
+const status = isSeal ? sealStatus(doc.slug) : null;
 
 const groupName = { 'premier-cercle': 'Premier cercle', 'deuxieme-cercle': 'Deuxième cercle', 'troisieme-cercle': 'Troisième cercle', 'quatrieme-cercle': 'Quatrième cercle · Maître', 'cinquieme-cercle': 'Cinquième cercle · Grand Maître', 'sceaux-de-clan': 'Sceaux de clan', 'a-valider': 'Archives instables', general: 'Fondations' }[doc.circle];
 const siblings = allowed ? docsFor(doc.circle).filter((entry) => !entry.isIndex && entry.slug !== doc.slug) : [];
@@ -31,6 +36,37 @@ const siblings = allowed ? docsFor(doc.circle).filter((entry) => !entry.isIndex 
         <aside class="article-meta" data-reveal><span>Codex</span><b>{doc.circle === 'general' ? '00' : groupName?.match(/^\w+/)?.[0]}</b><p>Les archives du Conclave sont actualisées à mesure que les sceaux sont découverts.</p></aside>
         <div class="archive-content" data-reveal set:html={doc.html}></div>
       </div>
+      {status && (
+        <section class="slot-status" data-state={!status.slotted ? 'free' : status.mj ? 'mj' : 'slotted'} data-reveal>
+          <div class="slot-status__mark"><i>枠</i></div>
+          <div class="slot-status__body">
+            <span class="slot-status__kicker">Statut de slot</span>
+            {!status.slotted && (
+              <>
+                <strong class="slot-status__title">Sceau libre</strong>
+                <p>Ce sceau n'est <strong>pas slotté</strong> : aucune limite de porteurs n'est appliquée.</p>
+              </>
+            )}
+            {status.slotted && status.mj && (
+              <>
+                <strong class="slot-status__title">Sceau MJ</strong>
+                <p>Sceau <strong>uniquement jouable par les staff MJ du Fuinjutsu</strong>. Aucune place n'est ouverte aux joueurs (0 / 0).</p>
+              </>
+            )}
+            {status.slotted && !status.mj && (
+              <>
+                <strong class="slot-status__title">Sceau slotté · {status.totalOcc} / {status.totalCap} places</strong>
+                <div class="slot-status__villages">
+                  {status.villages.filter((v) => v.cap > 0).map((v) => (
+                    <span class="slot-chip" data-full={v.occ >= v.cap ? 'true' : 'false'}>{v.villageName}<b>{v.occ}/{v.cap}</b></span>
+                  ))}
+                </div>
+                {status.notes && <p class="slot-status__notes">{status.notes}</p>}
+              </>
+            )}
+          </div>
+        </section>
+      )}
       {siblings.length > 0 && <footer class="related-archives" data-reveal><p>Continuer l’étude</p><div>{siblings.slice(0, 3).map((entry) => <a href={entry.slug}><span>封</span><div><small>{groupName}</small><strong>{entry.title}</strong></div><i>↗</i></a>)}</div></footer>}
     </article>
   ) : (

@@ -163,6 +163,31 @@ export function totals() {
   return { cap, occ, full };
 }
 
+/* ---------- Statut d'un sceau (pour sa page publique) ---------- */
+export type PublicSealStatus = {
+  slotted: boolean;
+  mj: boolean; // slotté mais 0/0 place ouverte -> réservé staff MJ
+  totalCap: number;
+  totalOcc: number;
+  notes: string | null;
+  villages: { villageName: string; cap: number; occ: number }[];
+};
+
+export function sealStatus(slug: string): PublicSealStatus {
+  if (!slottedSlugs().has(slug)) {
+    return { slotted: false, mj: false, totalCap: 0, totalOcc: 0, notes: null, villages: [] };
+  }
+  const cfg = db.prepare('SELECT notes FROM seal_config WHERE seal_slug = ?').get(slug) as { notes: string | null } | undefined;
+  const villages = listVillages().map((v) => ({
+    villageName: v.name,
+    cap: capFor(slug, v.id),
+    occ: occupiedFor(slug, v.id),
+  }));
+  const totalCap = villages.reduce((s, v) => s + v.cap, 0);
+  const totalOcc = villages.reduce((s, v) => s + v.occ, 0);
+  return { slotted: true, mj: totalCap === 0, totalCap, totalOcc, notes: cfg?.notes ?? null, villages };
+}
+
 export function allUsers(): { id: number; username: string; is_staff: number }[] {
   return db.prepare('SELECT id, username, is_staff FROM users ORDER BY username').all() as {
     id: number;
