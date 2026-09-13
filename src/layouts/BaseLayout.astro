@@ -1,6 +1,7 @@
 ---
 import { docsFor } from '../lib/content';
 import { visibleDocuments, visibleGroups } from '../lib/access';
+import { sealStatus } from '../lib/slots';
 import AccountMenu from '../components/AccountMenu.astro';
 import '../styles/custom.css';
 
@@ -35,10 +36,20 @@ const searchData = visibleDocuments(user).map(({ title, slug, circle, excerpt })
       <aside class="codex-nav" data-navigation>
         <p class="nav-overline">Sommaire du grimoire</p>
         {navGroups.map((group) => {
-          const entries = docsFor(group.key);
-          return entries.length ? <section class="nav-group">
+          // Décore chaque entrée d'un statut (0 non slotté · 1 slotté · 2 MJ) puis trie : index, non slotté, slotté, MJ
+          const decorated = docsFor(group.key).map((entry) => {
+            const st = !entry.isIndex && group.key !== 'general' ? sealStatus(entry.slug) : null;
+            const kind = !st || !st.slotted ? 0 : st.mj ? 2 : 1;
+            return { entry, kind };
+          });
+          decorated.sort((a, b) => (a.entry.isIndex ? 0 : 1) - (b.entry.isIndex ? 0 : 1) || a.kind - b.kind);
+          return decorated.length ? <section class="nav-group">
             <p><span>{group.glyph}</span>{group.label}</p>
-            <ul>{entries.map((entry) => <li><a class:list={[activeSlug === entry.slug && 'is-current', entry.isIndex && 'is-index']} href={entry.slug}>{entry.title}</a></li>)}</ul>
+            <ul>{decorated.map(({ entry, kind }) => <li><a class:list={[activeSlug === entry.slug && 'is-current', entry.isIndex && 'is-index']} href={entry.slug}>
+              <span class="nav-label">{entry.title}</span>
+              {kind === 1 && <span class="nav-badge nav-badge--slot">SLOT</span>}
+              {kind === 2 && <span class="nav-badge nav-badge--mj">MJ</span>}
+            </a></li>)}</ul>
           </section> : null;
         })}
       </aside>
