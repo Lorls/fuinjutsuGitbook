@@ -45,5 +45,5 @@ Le [Désenclavement de sceau](/troisieme-cercle/desenclavement/) est le premier 
 
 **5 éléments :** l'ajout des kanjis des 5 éléments donne un sceau un peu différent des autres (6 kanjis).
 
-**Cube aux faces écarlates :** sceau **plus complexe** que la norme du cercle — **8 kanjis** — et **slotté à un seul poseur**.
+**Cube aux faces écarlates :** **subjutsu** (sort in-game, clic droit — pas de roll), plus complexe que la norme du cercle — **8 kanjis** — et **slotté à un seul poseur**.
 :::

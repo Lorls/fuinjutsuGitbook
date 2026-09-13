@@ -1,6 +1,6 @@
 ---
 title: Sceau du cube aux faces écarlates
-description: Sceau du 3ème cercle qui dresse une geôle cubique à six faces écarlates autour d'une cible. Un seul poseur.
+description: "Subjutsu du 3ème cercle : un sort in-game qui, au clic droit, fait jaillir une geôle cubique à six faces écarlates. Un seul poseur."
 sidebar:
   order: 10
 ---
@@ -13,17 +13,17 @@ sidebar:
 </svg>
 </figure>
 
-:::note[Sceau unique]
-Ce sceau ne peut être **entretenu que par un seul poseur** à la fois : c'est un sceau **slotté** (une seule place, tous villages confondus). Tant qu'il est actif, personne d'autre ne peut en dresser un second.
+:::note[Subjutsu — sort in-game]
+Ce sceau est un **subjutsu** : un sort **codé en jeu**. On l'**active au clic droit** et le cube apparaît directement — **pas de roll**. C'est aussi un sceau **unique** : une seule place, tous villages confondus. Tant qu'il est actif, personne d'autre ne peut en faire jaillir un second.
 :::
 
-| Cercle | Kanjis | Roll |
+| Cercle | Kanjis | Activation |
 |---|---|---|
-| 3ème cercle | 緋 六 面 立 方 封 界 印 | > 50 |
+| 3ème cercle | 緋 六 面 立 方 封 界 印 | Clic droit (subjutsu) |
 
 ## Définition
 
-Le poseur fait jaillir autour de sa cible une **geôle cubique** dont les **six faces écarlates** se referment comme une enceinte de chakra. Les parois **enferment** la cible dans un volume clos : elle ne peut ni **sortir** ni **frapper au travers** tant que le cube tient. C'est un sceau de **capture et de contention**, à mi-chemin entre la barrière et la prison — les faces rougeoyantes marquent la limite infranchissable du volume scellé.
+Au **clic droit**, le poseur fait jaillir autour de sa cible une **geôle cubique** dont les **six faces écarlates** se referment comme une enceinte de chakra. Les parois **enferment** la cible dans un volume clos : elle ne peut ni **sortir** ni **frapper au travers** tant que le cube tient. C'est un sort de **capture et de contention**, à mi-chemin entre la barrière et la prison — les faces rougeoyantes marquent la limite infranchissable du volume scellé.
 
 ## Kanjis
 
@@ -40,9 +40,9 @@ Huit kanjis qui décrivent la **geôle** : écarlate, six faces, forme cubique, 
 
 ## Règles
 
+- **Subjutsu** : sort **in-game**, activé au **clic droit** — le cube apparaît directement, **sans roll**.
 - **Un seul poseur** : sceau slotté à **une place unique**, tous villages confondus. Aucun second cube ne peut exister tant que le premier tient.
 - Le cube se dresse **autour d'une cible** (ou d'une zone) à portée ; sa **taille** et sa **solidité** dépendent du niveau du poseur.
 - La cible enfermée **ne peut ni sortir ni frapper au travers** des faces tant que l'enceinte tient.
 - Le cube **consomme du chakra** en continu : sa durée est **limitée** et **s'effondre** si le poseur est interrompu ou à court de chakra.
 - **Retirable** par [désenclavement](/troisieme-cercle/desenclavement/) ou levé volontairement par le poseur.
-- Garder une **preuve de la pose** : enregistrement recommandé.
