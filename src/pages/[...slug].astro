@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { findDoc, docsFor } from '../lib/content';
 import { canView } from '../lib/access';
-import { sealStatus } from '../lib/slots';
+import { sealStatus, catalogue } from '../lib/slots';
 
 const user = Astro.locals.user;
 const slug = Astro.params.slug ?? '';
@@ -17,6 +17,21 @@ if (!allowed && !user) {
 // Panneau de statut de slot : uniquement sur les vraies pages de sceau
 const isSeal = allowed && !doc.isIndex && doc.circle !== 'general';
 const status = isSeal ? sealStatus(doc.slug) : null;
+
+// Sur les pages d'index de cercle : annote chaque lien de sceau d'un badge Slotté / MJ
+const isCircleIndex = allowed && doc.isIndex && doc.circle !== 'general';
+let contentHtml = doc.html;
+if (isCircleIndex) {
+  for (const c of catalogue().filter((s) => s.circle === doc.circle)) {
+    const st = sealStatus(c.slug);
+    if (!st.slotted) continue;
+    const badge = st.mj
+      ? '<span class="seal-badge seal-badge--mj">MJ</span>'
+      : `<span class="seal-badge seal-badge--slot">Slotté ${st.totalOcc}/${st.totalCap}</span>`;
+    const esc = c.slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    contentHtml = contentHtml.replace(new RegExp(`(<a href="${esc}">.*?</a>)`), `$1 ${badge}`);
+  }
+}
 
 const groupName = { 'premier-cercle': 'Premier cercle', 'deuxieme-cercle': 'Deuxième cercle', 'troisieme-cercle': 'Troisième cercle', 'quatrieme-cercle': 'Quatrième cercle · Maître', 'cinquieme-cercle': 'Cinquième cercle · Grand Maître', 'sceaux-de-clan': 'Sceaux de clan', 'a-valider': 'Archives instables', general: 'Fondations' }[doc.circle];
 const siblings = allowed ? docsFor(doc.circle).filter((entry) => !entry.isIndex && entry.slug !== doc.slug) : [];
@@ -34,7 +49,7 @@ const siblings = allowed ? docsFor(doc.circle).filter((entry) => !entry.isIndex 
       </header>
       <div class="article-grid">
         <aside class="article-meta" data-reveal><span>Codex</span><b>{doc.circle === 'general' ? '00' : groupName?.match(/^\w+/)?.[0]}</b><p>Les archives du Conclave sont actualisées à mesure que les sceaux sont découverts.</p></aside>
-        <div class="archive-content" data-reveal set:html={doc.html}></div>
+        <div class="archive-content" data-reveal set:html={contentHtml}></div>
       </div>
       {status && (
         <section class="slot-status" data-state={!status.slotted ? 'free' : status.mj ? 'mj' : 'slotted'} data-reveal>
