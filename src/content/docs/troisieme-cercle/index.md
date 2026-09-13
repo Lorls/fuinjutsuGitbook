@@ -38,7 +38,7 @@ Le [Désenclavement de sceau](/troisieme-cercle/desenclavement/) est le premier 
 | Maudit du prisonnier | 呪 印 縛 従 罰 | 呪印 (sceau maudit) + lier, soumettre, punir |
 | Réserve vitale | 生 命 蓄 気 | 生命 (vie) + accumuler l'énergie |
 | Localisation | 探 知 追 跡 | 探知 (détecter) + 追跡 (suivre) |
-| Cube aux faces écarlates | 緋 六 面 立 方 封 界 印 | écarlate + six faces + cube + sceller en enceinte (8 kanjis) |
+| Cube aux faces écarlates | 結界 四壁 空間 領域 | barrière + quatre murs + espace + domaine (4 paires, 8 kanjis) |
 
 :::note
 **Drain de chakra :** ajouter des **spirales emprisonnées** aux 4 coins du sceau, mais à l'intérieur du cercle.

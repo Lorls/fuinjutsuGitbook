@@ -19,24 +19,20 @@ Ce sceau est un **subjutsu** : un sort **codé en jeu**. On l'**active au clic d
 
 | Cercle | Kanjis | Activation |
 |---|---|---|
-| 3ème cercle | 緋 六 面 立 方 封 界 印 | Clic droit (subjutsu) |
+| 3ème cercle | 結界 四壁 空間 領域 | Clic droit (subjutsu) |
 
 ## Définition
 
-Au **clic droit**, le poseur fait jaillir autour de sa cible une **geôle cubique** dont les **six faces écarlates** se referment comme une enceinte de chakra. Les parois **enferment** la cible dans un volume clos : elle ne peut ni **sortir** ni **frapper au travers** tant que le cube tient. C'est un sort de **capture et de contention**, à mi-chemin entre la barrière et la prison — les faces rougeoyantes marquent la limite infranchissable du volume scellé.
+Au **clic droit**, le poseur fait jaillir autour de sa cible une **geôle cubique** dont les faces écarlates se referment comme une **enceinte de chakra** (結界). Ses **quatre murs** délimitent un **espace** clos, un **domaine** scellé dont la cible ne peut ni **sortir** ni **frapper au travers** tant que le cube tient. C'est un sort de **capture et de contention**, à mi-chemin entre la barrière et la prison — les faces rougeoyantes marquent la limite infranchissable du volume scellé.
 
 ## Kanjis
 
-Huit kanjis qui décrivent la **geôle** : écarlate, six faces, forme cubique, scellement en enceinte.
+Quatre paires (**8 kanjis**) qui décrivent la **geôle-barrière** : une enceinte de murs enfermant un espace.
 
-- **緋** — écarlate / cramoisi *(la couleur des faces)*
-- **六** — six
-- **面** — face / paroi *(六面 — les six faces d'un cube)*
-- **立** — dresser / ériger
-- **方** — cube / forme carrée *(立方 — cube)*
-- **封** — sceller / enfermer
-- **界** — enceinte / frontière *(結界 — barrière)*
-- **印** — sceau / marque
+- **結界** *(Kekkai)* — barrière
+- **四壁** *(Shi-heki)* — quatre murs *(四 quatre + 壁 mur)*
+- **空間** *(Kūkan)* — espace
+- **領域** *(Ryōiki)* — domaine
 
 ## Règles
 
